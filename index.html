@@ -1339,8 +1339,90 @@ li strong { font-weight: 600; }
 }
 
 </style>
+<style>
+#password-gate {
+  position: fixed; inset: 0; background: var(--ink); z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--sans);
+}
+#password-gate .gate-box {
+  max-width: 380px; width: 90%;
+  padding: 48px 40px;
+  background: var(--paper);
+  text-align: center;
+  border-radius: 4px;
+}
+#password-gate .gate-logo {
+  font-family: var(--serif); font-weight: 700; font-size: 26px;
+  letter-spacing: -0.02em; color: var(--ink); margin-bottom: 4px;
+}
+#password-gate .gate-sub {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 32px;
+}
+#password-gate input {
+  width: 100%; padding: 14px 14px;
+  font-family: var(--mono); font-size: 13px;
+  border: 1px solid var(--rule); background: var(--paper);
+  color: var(--ink); margin-bottom: 12px; box-sizing: border-box;
+}
+#password-gate input:focus { outline: none; border-color: var(--ink); }
+#password-gate button {
+  width: 100%; padding: 14px;
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.10em; text-transform: uppercase;
+  background: var(--ink); color: var(--accent);
+  border: none; cursor: pointer;
+}
+#password-gate button:hover { background: var(--ink-soft); }
+#password-gate .gate-error {
+  font-family: var(--mono); font-size: 11px; color: var(--hot);
+  margin-top: 12px; min-height: 16px; letter-spacing: 0.04em;
+}
+#password-gate .gate-footer {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+  color: var(--muted); margin-top: 24px; text-transform: uppercase;
+}
+</style>
 </head>
 <body>
+
+<div id="password-gate">
+  <div class="gate-box">
+    <div class="gate-logo">Λ &times; WCM</div>
+    <div class="gate-sub">Revenue Recovery Audit &middot; Confidential</div>
+    <input type="password" id="gate-input" placeholder="Password" autocomplete="off" autofocus>
+    <button onclick="checkGate()">Access audit &rarr;</button>
+    <div class="gate-error" id="gate-error"></div>
+    <div class="gate-footer">Prepared for Augment</div>
+  </div>
+</div>
+
+<script>
+function checkGate() {
+  var input = document.getElementById('gate-input').value;
+  if (input === 'augment2026') {
+    try { localStorage.setItem('augment-audit-auth', 'true'); } catch(e) {}
+    document.getElementById('password-gate').style.display = 'none';
+  } else {
+    document.getElementById('gate-error').textContent = 'Incorrect password';
+  }
+}
+(function() {
+  try {
+    if (localStorage.getItem('augment-audit-auth') === 'true') {
+      var gate = document.getElementById('password-gate');
+      if (gate) gate.style.display = 'none';
+    }
+  } catch(e) {}
+  var input = document.getElementById('gate-input');
+  if (input) {
+    input.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') checkGate();
+    });
+  }
+})();
+</script>
 
 <!-- ===== TOPBAR ===== -->
 <div class="topbar">
@@ -1629,7 +1711,7 @@ li strong { font-weight: 600; }
 
     <div class="oppt-row">
       <div class="oppt-num">04</div>
-      <div class="oppt-title-cell"><strong>Tripwire repositioned + price test.</strong> "Build Your Business with AI" with Zack Kass replaces the $149 AI Prompting Certificate (Georgia). $149 / $249 / $349 A/B/C price test. 30-day upsell to full MBA.<br><em style="color:var(--muted); font-size:14px">Why it earns: Zack Kass is the highest-CTR faculty face in Augment's current Meta creative batch &mdash; the team is paying to acquire AI-curious buyers and then routing them to the wrong faculty face. Anchoring the tripwire on Zack's existing module (already in the MBA curriculum, no new content production needed) closes the ad-to-page gap. The price test isolates the trade-off between conversion (lower price) and qualification (higher price) without locking the team into a guess.</em></div>
+      <div class="oppt-title-cell"><strong>Tripwire repositioned + price test.</strong> "Build Your Business with AI" with Zack Kass replaces the $149 AI Prompting Certificate (Georgia). $149 / $249 / $349 A/B/C price test. Dedicated upsell page with 72-hour email recovery window to the full MBA.<br><em style="color:var(--muted); font-size:14px">Why it earns: Zack Kass is the highest-CTR faculty face in Augment's current Meta creative batch &mdash; the team is paying to acquire AI-curious buyers and then routing them to the wrong faculty face. Anchoring the tripwire on Zack's existing module (already in the MBA curriculum, no new content production needed) closes the ad-to-page gap. The price test isolates the trade-off between conversion (lower price) and qualification (higher price) without locking the team into a guess.</em></div>
       <div class="oppt-meta">Weeks 1&ndash;6 &middot; Reposition + test</div>
       <div class="oppt-impact">+$200K&ndash;$450K Year 1</div>
     </div>
