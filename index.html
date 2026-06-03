@@ -1532,7 +1532,7 @@ li strong { font-weight: 600; }
       <div class="lever-num">Multiplier 01</div>
       <div class="lever-title">Sell to the customers you already have.</div>
       <div class="lever-text">
-        Augment's 10,000+ existing students have proven they'll pay $1,500+ for business education. They've bought one product. <strong>Build the product ladder underneath them</strong> &mdash; recorded Accelerators at $299 (order bump at MBA checkout), live Accelerators at $499-999 (post-purchase upsell, faculty-led), and the Founders Community at $4,999/yr (premium membership, sold Day 14-30 via email after enrollment momentum builds). Pure margin. Zero added CAC. <strong>The single biggest lever in this audit.</strong>
+        Augment's 10,000+ existing students have proven they'll pay $1,500+ for business education. They've bought one product. <strong>Build the product ladder underneath them</strong> &mdash; recorded Accelerators at $299 (order bump at MBA checkout) and live Accelerators at $499-999 (post-purchase upsell, faculty-led). Pure margin. Zero added CAC. (A Founders Community subscription at $4,999/yr is flagged separately in the LTV tab as an optional future-state idea, not in the in-scope numbers.) <strong>The single biggest lever in this audit.</strong>
       </div>
       <span class="lever-tag">+$150K&ndash;$300K Year 1 from existing customers, compounding to $500K+ Year 2</span>
     </div>
@@ -1672,7 +1672,21 @@ li strong { font-weight: 600; }
   </div>
 
   <p class="footnote">
-    <strong>A note on data confidence and projection method.</strong> All opportunity numbers in this audit are <em>Year 1 annualized run-rates, fully ramped over 12 months</em> &mdash; not in-period revenue inside the 12-week window. <strong>The headline math, shown explicitly:</strong> per-funnel gross acquisition ranges sum to $4.0&ndash;7.0M; a 0.75 humility discount per funnel takes that to $3.0&ndash;5.25M; a 25% overlap discount on acquisition lifts (catalog + AI + tripwire + free class share buyers) takes acquisition-side from $2.25&ndash;3.9M down to $950K&ndash;$1.7M after further conservatism reserves. Adding the Accelerator Ladder ($150K&ndash;$300K Year 1) lands the published headline at <strong>$1.1&ndash;2.0M Year 1 fully ramped</strong>, of which <strong>$550K&ndash;$1.0M is visible by Week 12</strong>. Year 2 fully compounded: +$1.8&ndash;3.0M total lift, putting Augment at $7.3&ndash;8.5M annualized run-rate. <strong>Base for the lift ratio:</strong> $3.50M Meta-attributed revenue Oct 2025 &ndash; May 2026 (7.6 months) annualizes to <strong>~$5.5M Meta-attributed run-rate</strong>; the +$1.1&ndash;2.0M Year 1 lift represents 20&ndash;36% of that base. Stripe gross bookings run ~30&ndash;40% higher than Meta-attributed across all funnels &mdash; lift expressed against the Meta base is the conservative comparison. Per-funnel ROAS estimates are derived from GA4 page-level revenue and global Meta spend allocated by traffic share. Tripwire metrics are team-reported (5% Sess&rarr;Checkout, 1.9% Sess&rarr;Purchase, 1x ROAS) pre-repositioning &mdash; low confidence on durability since Funnel 03 recommends changing the product, price, and faculty face. Free Class funnel revenue (~$332K / 90 days) is derived from popup-attribution data. Decision-gated upside (Free Class paid acquisition at scale; LinkedIn channel maturity; price-test winners; Founders Community subscription) is intentionally excluded from the headline and treated as Phase 2 if the validation tests pass. <strong>If anything in this document feels too modest, read it as deliberate &mdash; over-projection destroys audit credibility faster than under-projection.</strong>
+    <strong>A note on data confidence and projection method.</strong> All opportunity numbers in this audit are <em>Year 1 annualized run-rates, fully ramped over 12 months</em> &mdash; not in-period revenue inside the 12-week window. <strong>The headline math, shown as explicit multipliers:</strong>
+    <br><br>
+    <strong>(1)</strong> Six deliverables sum to gross <strong>$1.35M&ndash;$2.7M</strong> Year 1 (per the Six Deliverables table above &mdash; each row's range is already after a 0.75 humility discount applied per funnel against industry-benchmark lift ranges).
+    <br>
+    <strong>(2)</strong> Apply <strong>&times;0.80</strong> overlap discount to acquisition lifts (catalog + AI + tripwire + Free Class share buyers; same buyer crossing multiple funnels counted once, not multiple times): acquisition-side $1.2M&ndash;$2.45M &rarr; <strong>$950K&ndash;$1.95M</strong>.
+    <br>
+    <strong>(3)</strong> LTV (Accelerator Ladder) is additive because the buyer base is distinct from cold acquisition: add <strong>$150K&ndash;$300K</strong> Year 1.
+    <br>
+    <strong>(4)</strong> Net published headline: <strong>$1.1M&ndash;$2.0M Year 1</strong> (sum of $950K&ndash;$1.95M acquisition + $150K&ndash;$300K LTV, rounded to common range). Visible by Week 12: ~50% of fully-ramped = <strong>$550K&ndash;$1.0M</strong>. Year 2 fully compounded: $1.8M&ndash;$3.0M total lift &rarr; <strong>$7.3M&ndash;$8.5M annualized run-rate.</strong>
+    <br><br>
+    <strong>Base for the lift ratio:</strong> $3.50M Meta-attributed revenue Oct 2025 &ndash; May 2026 (audit period covers ~7.6 months given the May 19 data cutoff &mdash; not a full 8 months) annualizes to <strong>~$5.5M Meta-attributed run-rate</strong>. The +$1.1M&ndash;$2.0M Year 1 lift represents 20&ndash;36% of that base. Stripe gross bookings run ~30&ndash;40% higher than Meta-attributed across all funnels &mdash; lift expressed against the Meta base is the conservative comparison.
+    <br><br>
+    <strong>Conventions:</strong> "Begin Checkout" rates and "Sess&rarr;Purchase" rates are distinct metrics &mdash; Begin Checkout is the upstream micro-conversion (US baseline 1.31%, target 2.1&ndash;2.4%), Sess&rarr;Purchase is the end-to-end conversion (global 0.09% currently, target 0.14&ndash;0.16% post-rebuild). Both lift 1.6&ndash;1.8&times; per the catalog rebuild target. Per-funnel ROAS estimates are derived from GA4 page-level revenue and global Meta spend allocated by traffic share. Tripwire metrics are team-reported (5% Sess&rarr;Checkout, 1.9% Sess&rarr;Purchase, 1x ROAS) pre-repositioning &mdash; low confidence on durability since Funnel 03 recommends changing the product, price, and faculty face. Free Class funnel revenue (~$332K / 90 days) is derived from popup-attribution data. Decision-gated upside (Free Class paid acquisition at scale; LinkedIn channel maturity; price-test winners; Founders Community subscription) is intentionally excluded from the headline and treated as Phase 2 if the validation tests pass.
+    <br><br>
+    <strong>If anything in this document feels too modest, read it as deliberate &mdash; over-projection destroys audit credibility faster than under-projection.</strong>
   </p>
 
 </section>
@@ -1696,7 +1710,7 @@ li strong { font-weight: 600; }
   <h2 class="section">What you're actually selling.</h2>
 
   <p>
-    Augment isn't selling 720 video classes, 15 modules, 110+ PDFs, or lifetime access. Those are the features. <strong>What buyers actually pay for is transformation</strong> &mdash; career outcomes (Ann V.: "landed a role I'd genuinely call my dream job"), business outcomes (Neil: "running a $5M company instead of playing small business owner"), and identity outcomes (Ricardo: "skip the theory, skip the six figures, learn from the source").
+    Augment isn't selling 800+ videos, 13 modules, 110+ PDFs, or lifetime access. Those are the features. <strong>What buyers actually pay for is transformation</strong> &mdash; career outcomes (Ann V.: "landed a role I'd genuinely call my dream job"), business outcomes (Neil: "running a $5M company instead of playing small business owner"), and identity outcomes (Ricardo: "skip the theory, skip the six figures, learn from the source").
   </p>
 
   <p>
@@ -1720,8 +1734,8 @@ li strong { font-weight: 600; }
     <div class="callout-kicker">The offer (locked)</div>
     <div class="callout-text">
       <strong>Anchor: $2,858</strong> (strikethrough &mdash; new anchor replacing the current $2,450 so the 40% OFF math reads correctly)<br>
-      <strong>Pay in full: $1,715</strong> (exactly 40% off the new anchor &mdash; saves $1,143)<br>
-      <strong>Installments: $343 &times; 5 = $1,715</strong> (the existing 3-4-3 plan, unchanged &mdash; same total as paying in full)<br>
+      <strong>Pay in full: $1,715</strong> (~40% off the new anchor &mdash; saves $1,143)<br>
+      <strong>Installments: $343 &times; 5 = $1,715</strong> (the existing 5-month installment plan, unchanged &mdash; same total as paying in full)<br>
       <strong>Countdown-based urgency:</strong> Augment's existing ~9hr session-based timer locks <strong>40% OFF + lifetime access</strong>. After the timer hits zero: $1,995, 1-year access only.<br>
       <strong>15-day money-back guarantee:</strong> Try Augment risk-free for 15 days. If you can't name one decision you'll make differently &mdash; full refund, no questions asked, email finance@augment.org.
     </div>
@@ -1839,7 +1853,7 @@ li strong { font-weight: 600; }
         <div class="rec-section-label">Why 40% off &mdash; tested data, not opinion</div>
         <div class="rec-section-content">
           <p>40% off the same product converts better than 30% off. <strong>Tested at scale across multiple high-ticket education funnels, 40% consistently wins.</strong> The mechanism: buyers anchor on the perceived savings, and "40%" reads as a structurally different discount than "30%" even when the dollar savings are similar. The "40%" threshold crosses a perception barrier that "30%" doesn't.</p>
-          <p><strong>The actual final price doesn't change.</strong> The buyer still pays $1,715 (or $343 &times; 5). Only the strikethrough anchor moves: from the current ~$2,450 to <strong>$2,858</strong>, because $2,858 &times; 0.60 = $1,715 exactly. Same buyer cost, stronger discount perception. Same checkout flow, same fulfillment, same everything else &mdash; just a different number in the strikethrough.</p>
+          <p><strong>The actual final price doesn't change.</strong> The buyer still pays $1,715 (or $343 &times; 5). Only the strikethrough anchor moves: from the current ~$2,450 to <strong>$2,858</strong>, so $2,858 &times; 0.60 &asymp; $1,715. Same buyer cost, stronger discount perception. Same checkout flow, same fulfillment, same everything else &mdash; just a different number in the strikethrough.</p>
         </div>
       </div>
 
@@ -1857,7 +1871,7 @@ li strong { font-weight: 600; }
         <div class="rec-section-content">
           <p>Augment's catalog page already displays a session-based countdown timer in the format <code style="font-family:var(--mono); background:var(--paper-soft); padding:2px 6px; border-radius:3px">00:09:10:29</code> (DD:HH:MM:SS), running ~9 hours from when the buyer first lands. <strong>The audit doesn't change the timer duration or format. It changes what the timer is tied to.</strong></p>
           <p>Today the timer is attached to "MAY COHORT - LAST CHANCE - 30% OFF" with no real consequence at zero &mdash; the discount comes back next week, sophisticated buyers figure it out, the timer becomes theater. <strong>The change: tie the same timer to the lifetime + 40% off bonuses, backed by the real post-deadline price ladder (next section).</strong> When the timer hits zero, the offer the buyer sees actually changes &mdash; the buyer can verify it by refreshing, coming back later, or testing with a different browser. The price they actually pay rises to $1,995, the access term shrinks to 1-year, the math gets meaningfully worse.</p>
-          <p><strong>Operationally:</strong> this is a coupon-controlled change in Stripe, not a backend rebuild. The current discount code (e.g., <code style="font-family:var(--mono); background:var(--paper-soft); padding:2px 6px; border-radius:3px">VBLbyG0O</code>) auto-expires when the buyer's session timer hits zero, falling back to a $1,995 / 1-year SKU as the default. Same checkout flow, different coupon logic. <strong>The timer is tied to first-visit timestamp (cookie/localStorage), not page-load &mdash; buyers can't game it by refreshing.</strong></p>
+          <p><strong>Operationally:</strong> this is a coupon-controlled change in Stripe, not a backend rebuild. The current discount code auto-expires when the buyer's session timer hits zero, falling back to a $1,995 / 1-year SKU as the default. Same checkout flow, different coupon logic. <strong>The timer is tied to first-visit timestamp (cookie/localStorage), not page-load &mdash; buyers can't game it by refreshing.</strong></p>
         </div>
       </div>
 
@@ -2023,7 +2037,7 @@ li strong { font-weight: 600; }
             <li><strong>Lifetime + 40% off framed as expiring bonuses</strong> &mdash; visually separated from standard features (accent color, gift icon, "EXPIRES SUN" label). Standard features (modules, sessions, deals, events) in regular text.</li>
             <li><strong>Post-deadline price + access term shown explicitly</strong> on desktop ("after Sunday: 1-year access only", "after Sunday: $1,995"). Makes the deadline real, not theatrical.</li>
             <li><strong>Sticky CTA on scroll-past</strong> &mdash; thin bar appearing at the bottom of the viewport when the buyer scrolls past the card, with price + countdown + one-tap enrollment. Standard high-ticket education pattern.</li>
-            <li><strong>Installment price preserved at $343 &times; 5</strong> &mdash; the existing 3-4-3 plan, unchanged.</li>
+            <li><strong>Installment price preserved at $343 &times; 5</strong> &mdash; the existing 5-month installment plan, unchanged.</li>
             <li><strong>Trust signals adjacent to CTA on both surfaces</strong> (15-day guarantee + Trustpilot rating in same eyespan as enroll button).</li>
             <li><strong>Specific deadline</strong> (Sun 11:59 PM ET) on both surfaces, not "this week."</li>
           </ol>
@@ -2058,7 +2072,7 @@ li strong { font-weight: 600; }
       <div class="rec-section">
         <div class="rec-section-label">What</div>
         <div class="rec-section-content">
-          <p>The /mba-program-ai page converts 2.5&times; better than the catalog page despite being a near-identical layout. That gap isn't a page-quality difference &mdash; it's a buyer-intent difference. <strong>Cold buyers in 2026 are AI-shoppers first.</strong> They're showing up for AI and self-selecting toward whatever surface mentions it. Right now the catalog page buries AI &mdash; it's positioned as one of 15 modules, the faculty wall doesn't lead with AI operators, and the "companies people come from" row skips OpenAI / Meta / Anthropic entirely.</p>
+          <p>The /mba-program-ai page converts 2.5&times; better than the catalog page despite being a near-identical layout. That gap isn't a page-quality difference &mdash; it's a buyer-intent difference. <strong>Cold buyers in 2026 are AI-shoppers first.</strong> They're showing up for AI and self-selecting toward whatever surface mentions it. Right now the catalog page buries AI &mdash; it's positioned as one of 13 modules, the faculty wall doesn't lead with AI operators, and the "companies people come from" row skips OpenAI / Meta / Anthropic entirely.</p>
           <p><strong>This rec doesn't rebrand the catalog page as an AI page.</strong> It surfaces AI prominently within the existing structure so the AI-shopper landing here doesn't have to scroll 8 sections to confirm Augment has what they came for.</p>
         </div>
       </div>
@@ -2124,7 +2138,7 @@ li strong { font-weight: 600; }
           <table style="width:100%; border-collapse:collapse; font-family:var(--sans); font-size:13px; margin-top:12px">
 
             <tr style="border-top:2px solid var(--ink); border-bottom:1px solid var(--rule)">
-              <td style="padding:10px 0; font-weight:600">15-module MBA curriculum &mdash; lifetime access<br><span style="font-weight:400; color:var(--ink-soft); font-size:12px">comparable: Reforge $1,995/yr (recurring, content rotates) &middot; Augment: 15 modules, 800+ videos, kept for life</span></td>
+              <td style="padding:10px 0; font-weight:600">13-module MBA curriculum &mdash; lifetime access<br><span style="font-weight:400; color:var(--ink-soft); font-size:12px">comparable: Reforge $1,995/yr (recurring, content rotates) &middot; Augment: 13 modules, 800+ videos, kept for life</span></td>
               <td style="padding:10px 0; text-align:right; font-family:var(--mono); font-weight:700">$3,990<br><span style="font-weight:400; color:var(--ink-soft); font-size:10px">(2 years of Reforge)</span></td>
             </tr>
 
@@ -2925,7 +2939,7 @@ li strong { font-weight: 600; }
   <h2 class="section">One more &mdash; lesson previews on every module.</h2>
 
   <p>
-    Not a standalone REC, but worth shipping alongside the rebuild. The current curriculum block shows each of the 15 modules with "96 Units &middot; 4h Video &middot; 3 Cases &middot; 2 Instructors" pill rows. Buyers see the structure but never see the substance &mdash; what does an Augment lesson actually feel like to watch?
+    Not a standalone REC, but worth shipping alongside the rebuild. The current curriculum block shows each of the 13 modules with "96 Units &middot; 4h Video &middot; 3 Cases &middot; 2 Instructors" pill rows. Buyers see the structure but never see the substance &mdash; what does an Augment lesson actually feel like to watch?
   </p>
 
   <p>
@@ -2969,7 +2983,7 @@ li strong { font-weight: 600; }
   </p>
 
   <p>
-    <strong>Cheap to ship:</strong> Augment already has the video content. Pick the strongest 60 seconds per module (faculty hook, framework reveal, or a sharp case-study insight), crop it with subtitle overlay, host on Wistia or Mux. One designer + one editor, ~3 days for all 15 modules. The team can refine which clip works best later based on play-rate data.
+    <strong>Cheap to ship:</strong> Augment already has the video content. Pick the strongest 60 seconds per module (faculty hook, framework reveal, or a sharp case-study insight), crop it with subtitle overlay, host on Wistia or Mux. One designer + one editor, ~3 days for all 13 modules. The team can refine which clip works best later based on play-rate data.
   </p>
 
   <h2 class="section">Catalog tab — total opportunity.</h2>
@@ -3672,7 +3686,7 @@ li strong { font-weight: 600; }
       <div class="rec-section">
         <div class="rec-section-label">2. Dedicated guarantee section (from catalog REC #07)</div>
         <div class="rec-section-content">
-          <p>Same 30-day, 3-modules, full-refund-plus-keep-the-materials guarantee that the catalog page gets. Positioned right after the offer card. The AI buyer is making a $1,715 decision &mdash; risk reversal needs to be a dedicated section, not buried in the FAQ.</p>
+          <p>Same 15-day, 3-modules, full-refund-plus-keep-the-materials guarantee that the catalog page gets. Positioned right after the offer card. The AI buyer is making a $1,715 decision &mdash; risk reversal needs to be a dedicated section, not buried in the FAQ.</p>
         </div>
       </div>
 
@@ -4433,7 +4447,7 @@ li strong { font-weight: 600; }
               <td style="padding:10px 12px; font-family:var(--mono); font-size:10px; letter-spacing:0.08em; color:var(--muted); text-transform:uppercase; font-weight:700">What's included</td>
               <td style="padding:10px 12px; font-family:var(--mono); font-size:10px; letter-spacing:0.08em; color:var(--muted); text-transform:uppercase; font-weight:700; text-align:right">Value</td>
             </tr>
-            <tr style="border-bottom:1px solid var(--rule)"><td style="padding:8px 12px">The Augment MBA &mdash; 13 modules, 720+ classes, lifetime access</td><td style="padding:8px 12px; text-align:right; font-family:var(--mono); font-weight:700">$2,858</td></tr>
+            <tr style="border-bottom:1px solid var(--rule)"><td style="padding:8px 12px">The Augment MBA &mdash; 13 modules, 800+ videos, lifetime access</td><td style="padding:8px 12px; text-align:right; font-family:var(--mono); font-weight:700">$2,858</td></tr>
             <tr style="border-bottom:1px solid var(--rule)"><td style="padding:8px 12px"><strong>Bonus 1 (expires in 24 hours):</strong> "Build Your Business with AI" Certificate with Zack Kass</td><td style="padding:8px 12px; text-align:right; font-family:var(--mono); font-weight:700">$299</td></tr>
             <tr style="border-bottom:1px solid var(--rule)"><td style="padding:8px 12px"><strong>Bonus 2:</strong> Live Q&amp;A access this week &mdash; "this week at Augment" events</td><td style="padding:8px 12px; text-align:right; font-family:var(--mono); font-weight:700">$599</td></tr>
             <tr style="border-bottom:1px solid var(--rule)"><td style="padding:8px 12px"><strong>Bonus 3:</strong> 60-min onboarding 1:1 with Augment director (Ariel or Roy)</td><td style="padding:8px 12px; text-align:right; font-family:var(--mono); font-weight:700">$497</td></tr>
@@ -5084,7 +5098,7 @@ li strong { font-weight: 600; }
     </div>
     <div class="qw-row">
       <div class="qw-num">→</div>
-      <div class="qw-title"><strong>Order bump take rate.</strong> Recorded Accelerator $299 attach at Stripe checkout. Target 20&ndash;35% take rate by Week 6.</div>
+      <div class="qw-title"><strong>Order bump take rate.</strong> Recorded Accelerator $299 attach at Stripe checkout. Target 25&ndash;35% take rate by Week 6.</div>
       <div class="qw-effort">Weekly from Week 4</div>
       <div class="qw-impact">Stripe</div>
     </div>
@@ -5143,7 +5157,7 @@ li strong { font-weight: 600; }
     </div>
     <div class="oppt-row">
       <div class="oppt-num">W10</div>
-      <div class="oppt-title-cell">Free Class paid acquisition test concluded &mdash; scale (if &ge;1.5x), refine, or kill. AI funnel scaled to $150&ndash;250K/mo spend with measured ROAS. Founders Community ($4,999/yr) launched to MBA buyers.</div>
+      <div class="oppt-title-cell">Free Class paid acquisition test concluded &mdash; scale (if &ge;1.5x), refine, or kill. AI funnel scaled to $150&ndash;250K/mo spend with measured ROAS.</div>
       <div class="oppt-meta">Scale decisions</div>
       <div class="oppt-impact">Phase 2 gates resolve</div>
     </div>
