@@ -2573,8 +2573,9 @@ li strong { font-weight: 600; }
       <div class="rec-section">
         <div class="rec-section-label">What</div>
         <div class="rec-section-content">
-          <p>The 7-email AC sequence currently leads with discount framing ("30% off", "50% off for 48 hours"). Rewrite every subject line and body to lead with the <strong>asset that's going away</strong> (lifetime access + 40% off when timer hits zero) &times; the <strong>specific deadline</strong> (timer expiry or end of week) &times; the <strong>specific consequence</strong> (next cohort = annual access only).</p>
-          <p>Full rewrites for all 7 emails are in the email cards section below the recommendations.</p>
+          <p>The current AC sequence leads with discount framing ("30% off", "50% off for 48 hours"). <strong>Rewrite to a tighter 6-email sequence over a 48-hour cart-recovery window</strong> &mdash; every subject leads with the <strong>asset that's going away</strong> (lifetime access + 40% off) &times; the <strong>specific hour count</strong> (47h, 36h, 23h, 10h, 4h, 1h) &times; the <strong>specific consequence</strong> ($1,995 / 1-year after the window closes). See the email card sequence below for the full rewrite.</p>
+          <p>Full body previews for all 6 emails are in the email cards section below the recommendations.</p>
+          <p><strong>Operational requirement:</strong> the 48-hour cart-recovery window means the team preserves the lifetime + 40% off offer for cart abandoners for 48 hours via Stripe (cookie-tracked or email-link-tracked). After 48 hours, the buyer's offer reverts to the post-timer $1,995 / 1-year SKU (same fallback as the catalog REC #02 post-deadline price ladder). Honest, bounded, real consequence at hour 48.</p>
         </div>
       </div>
 
@@ -2678,40 +2679,30 @@ li strong { font-weight: 600; }
   <h2 class="section">Abandoned cart email rewrites &mdash; permanence &times; urgency.</h2>
 
   <p>
-    Per REC #08. Seven emails, rewritten around the timer-based urgency + this week's events. Each one leads with lifetime + 40% off &times; the session countdown &times; the "post-timer = $1,995 + 1-year access only" consequence. Body previews included for the high-impact emails.
+    Per REC #08. <strong>Six emails over a 48-hour cart-recovery window</strong> &mdash; the team extends the lifetime + 40% off offer by 48 hours for abandoners as a one-time bounded extension (honest urgency, real bounded window). Last three emails stack on day two as the deadline closes. Every email leads with the <strong>specific asset</strong> (lifetime access) + the <strong>specific hour count</strong> + the <strong>specific consequence</strong> ($1,995 / 1-year after the window closes).
   </p>
 
   <div class="callout-light">
     <div class="callout-light-kicker">Shared closer &mdash; every email in the sequence ends with this P.S.</div>
     <div class="callout-light-text">
       <em>P.S. 15-day guarantee still stands. Try the first 3 modules, find one decision worth $1,715. If you can't, full refund &mdash; and you keep every PDF you downloaded.</em><br><br>
-      The guarantee restate is the second-most-read line in any email after the subject. Repeating it across all 7 sends compounds the trust signal and reduces "I'll think about it" friction at the exact moment the buyer is closest to clicking.
+      The guarantee restate is the second-most-read line in any email after the subject. Repeating it across all six sends compounds the trust signal and reduces "I'll think about it" friction at the exact moment the buyer is closest to clicking.
     </div>
   </div>
 
+  <!-- AC #1 -->
   <div class="email-card">
     <div class="email-head" onclick="toggleRec(this)">
       <div class="email-num">AC #1</div>
-      <div class="email-title">Your lifetime access expires Sunday</div>
-      <div class="email-trigger">30 min after abandon</div>
+      <div class="email-title">Marisha &mdash; your lifetime access locks in 47 hours, then it's gone</div>
+      <div class="email-trigger">30 min after abandon &middot; from Roy</div>
       <div class="rec-toggle">&#9660;</div>
     </div>
     <div class="email-body">
       <div class="rec-section">
-        <div class="rec-section-label">Before / After</div>
-        <div class="rec-section-content">
-          <div class="email-mock">
-            <div class="email-mock-subject before">May Cohort &mdash; 30% OFF</div>
-          </div>
-          <div class="email-mock" style="border-color:var(--accent)">
-            <div class="email-mock-subject">Marisha &mdash; your lifetime access at $1,715 expires Sunday</div>
-          </div>
-        </div>
-      </div>
-      <div class="rec-section">
         <div class="rec-section-label">Why this converts better</div>
         <div class="rec-section-content">
-          <p>"30% off" trains the buyer to wait &mdash; the discount comes back next visit. "Lifetime access expires when the timer hits zero" tells the buyer the asset is going away. With REC #02 (timer + post-timer price ladder) and REC #05 ("this week at Augment" events) making this genuinely true, the urgency is real.</p>
+          <p>The opener leads with a specific hour count (not a vague "Sunday") tied to the 48-hour cart-recovery window. The body shows the product the buyer almost bought &mdash; what's in the box &mdash; before naming the loss. Buyers who abandoned don't need a longer pitch on what Augment is; they need a reminder of what they specifically lose if they don't finish.</p>
         </div>
       </div>
       <div class="rec-section">
@@ -2720,11 +2711,15 @@ li strong { font-weight: 600; }
           <div class="email-mock">
             <div class="email-mock-body-preview">
               Hi {{ first_name }},<br><br>
-              You started enrolling in Augment a few minutes ago but didn't finish. Your timer is still running. When it hits zero, three things happen:<br><br>
-              <span class="acc">1. Lifetime access becomes 1-year only.</span><br>
-              <span class="acc">2. 40% off becomes $1,995 flat.</span><br>
-              <span class="acc">3. This week's events at Augment (Wednesday meetup, Thursday Q&amp;A with Harry Stebbings) end. Next week's lineup is different.</span><br><br>
-              What lifetime actually means: when we ship Zack's next AI module in August, you get it free. When Uri runs his next live cohort in October, you walk in without paying again. Every founder who buys after your timer hits zero pays for those again.<br><br>
+              You almost finished enrolling in Augment a few minutes ago. We've extended your enrollment window by 48 hours so you don't lose what you nearly had &mdash; but the clock is running.<br><br>
+              <strong>What you're 47 hours away from buying:</strong><br>
+              &bull; <strong>13 modules</strong> taught by the founders of Wikipedia, YouTube, Waze, Shazam + AI operators from OpenAI and Meta<br>
+              &bull; <strong>Lifetime access</strong> &mdash; every new module we ship (Zack's next AI release, Uri's next live cohort), yours free, forever<br>
+              &bull; <strong>800+ videos</strong>, weekly live faculty Q&amp;As, in-person events in NYC / SF / London / Dubai, $100K+ in AI tool deals<br><br>
+              <span class="acc">When the 48-hour window closes, three things happen:</span><br>
+              1. Lifetime access becomes 1-year only<br>
+              2. 40% off becomes $1,995 flat<br>
+              3. This week's events (Wednesday meetup, Thursday Q&amp;A with Harry Stebbings) end &mdash; next week's lineup is different<br><br>
               [ FINISH ENROLLMENT &mdash; LOCK LIFETIME &rarr; ]<br><br>
               &mdash; Roy<br><br>
               <em>P.S. 15-day guarantee still stands. Try the first 3 modules, find one decision worth $1,715. If you can't, full refund &mdash; and you keep every PDF you downloaded.</em>
@@ -2735,29 +2730,19 @@ li strong { font-weight: 600; }
     </div>
   </div>
 
+  <!-- AC #2 -->
   <div class="email-card">
     <div class="email-head" onclick="toggleRec(this)">
       <div class="email-num">AC #2</div>
-      <div class="email-title">"I picked up one insight that paid for everything." &mdash; Ann V., Augment '25</div>
-      <div class="email-trigger">Day 2</div>
+      <div class="email-title">10,000 founders. 4.7&#9733;. The 5 lessons they say paid for the program.</div>
+      <div class="email-trigger">Hour 12 &middot; from Roy</div>
       <div class="rec-toggle">&#9660;</div>
     </div>
     <div class="email-body">
       <div class="rec-section">
-        <div class="rec-section-label">Before / After</div>
-        <div class="rec-section-content">
-          <div class="email-mock">
-            <div class="email-mock-subject before">Join +10,000 Augment Alumni</div>
-          </div>
-          <div class="email-mock" style="border-color:var(--accent)">
-            <div class="email-mock-subject">"I picked up one insight that paid for everything." &mdash; Ann V., Augment '25</div>
-          </div>
-        </div>
-      </div>
-      <div class="rec-section">
         <div class="rec-section-label">Why this converts better</div>
         <div class="rec-section-content">
-          <p>"Join +10,000" is a feature claim &mdash; no buyer cares. A verbatim student quote with a specific outcome ("one insight paid for everything") is the proof every cold reader is actually looking for. Subject lines that quote real customers consistently outperform aspirational claims.</p>
+          <p>Social proof at scale opens (10,000 founders, 4.7&#9733;) instead of a single quote. Then the body delivers a specific "what insights they'll garner" recap &mdash; five named lessons tied to real student outcomes, so the buyer who's on the fence sees both the proof and the actual product depth. Pulls verbatim phrases from Trustpilot reviews wherever possible.</p>
         </div>
       </div>
       <div class="rec-section">
@@ -2766,10 +2751,13 @@ li strong { font-weight: 600; }
           <div class="email-mock">
             <div class="email-mock-body-preview">
               Hi {{ first_name }},<br><br>
-              Two months ago Ann V. was in the same place you are now &mdash; deciding whether the Augment MBA was worth $1,715.<br><br>
-              Here's what she wrote on Trustpilot last month, in her own words:<br><br>
-              <em>"I picked up one insight from a single call that directly led to landing a role I would genuinely call my dream job. One call. That alone paid for everything."</em><br><br>
-              One insight. One call. That's the bar. <span class="acc">Your lifetime access + 40% off is still locked, but the timer is running.</span> Lifetime means every new module we ship, you get free &mdash; including Zack's next AI release in August.<br><br>
+              10,000+ founders have completed the Augment MBA. The verified Trustpilot reviews (4.7&#9733;, 163 reviews) keep coming back to the same handful of lessons. Here are the five they cite most often:<br><br>
+              <strong>1. Uri Levine's "Three-Phase Startup Framework" (Module 1)</strong> &mdash; the same framework Uri used to take Waze from idea to acquisition. Ricardo wrote: <em>"Skip the theory, skip the six figures, learn from the source."</em><br><br>
+              <strong>2. Harry Stebbings' fundraising playbook (Module 6)</strong> &mdash; the exact narrative arc he's seen close hundreds of rounds. <em>"Used this playbook three weeks after the module to raise our seed."</em><br><br>
+              <strong>3. Zack Kass's "AI for Business" module</strong> &mdash; the framework he used at OpenAI to ship ChatGPT to enterprise. Neil wrote: <em>"Even firing the old version of myself to shift from playing small business owner to running a $5M company."</em><br><br>
+              <strong>4. Felix Haas's "Vibe Coding" module</strong> &mdash; ship an AI product without writing code. <em>"Built a working prototype during the module."</em><br><br>
+              <strong>5. The one-call insight</strong> &mdash; Ann V. wrote: <em>"I picked up one insight from a single call that directly led to landing a role I would genuinely call my dream job. One call. That alone paid for everything."</em><br><br>
+              <span class="acc">Your enrollment window closes in 36 hours.</span> After that, lifetime access becomes 1-year only and the 40% off ($1,143 in savings) is gone.<br><br>
               [ FINISH ENROLLMENT &mdash; LOCK LIFETIME &rarr; ]<br><br>
               &mdash; Roy<br><br>
               <em>P.S. 15-day guarantee still stands. Try the first 3 modules, find one decision worth $1,715. If you can't, full refund &mdash; and you keep every PDF you downloaded.</em>
@@ -2780,51 +2768,58 @@ li strong { font-weight: 600; }
     </div>
   </div>
 
+  <!-- AC #3 -->
   <div class="email-card">
     <div class="email-head" onclick="toggleRec(this)">
       <div class="email-num">AC #3</div>
-      <div class="email-title">3 days left to lock in lifetime &mdash; this week's events at Augment</div>
-      <div class="email-trigger">Day 3</div>
+      <div class="email-title">23 hours left to lock $14,775 of value at $1,715</div>
+      <div class="email-trigger">Hour 24 &middot; from Roy</div>
       <div class="rec-toggle">&#9660;</div>
     </div>
     <div class="email-body">
       <div class="rec-section">
-        <div class="rec-section-label">Before / After</div>
+        <div class="rec-section-label">Why this converts better</div>
         <div class="rec-section-content">
-          <div class="email-mock">
-            <div class="email-mock-subject before">Lessons from billion-dollar founders</div>
-          </div>
-          <div class="email-mock" style="border-color:var(--accent)">
-            <div class="email-mock-subject">3 days left to lock in lifetime &mdash; this week's events at Augment</div>
-          </div>
+          <p>The subject anchors the value stack as a number ($14,775) the buyer can compare to the price ($1,715). The body recaps the top six line items from the catalog page value stack &mdash; condensed for email. Reading time: 20 seconds.</p>
         </div>
       </div>
       <div class="rec-section">
-        <div class="rec-section-label">Why this converts better</div>
+        <div class="rec-section-label">Body preview</div>
         <div class="rec-section-content">
-          <p>Specific deadline (3 days), specific events (this week's "This week at Augment" calendar), specific asset (lifetime). Three concrete details vs zero in the original. The email can include this week's actual events from REC #05 ("Thursday Q&amp;A with Harry Stebbings, Friday AI build session"), making the loss tangible.</p>
+          <div class="email-mock">
+            <div class="email-mock-body-preview">
+              Hi {{ first_name }},<br><br>
+              Halfway through your 48-hour window. Here's what $1,715 actually unlocks &mdash; with real market comparables:<br><br>
+              &bull; 13-module MBA curriculum, lifetime access <span style="color:var(--muted)">&middot; Reforge equivalent: $3,990</span><br>
+              &bull; Weekly faculty office hours, lifetime <span style="color:var(--muted)">&middot; Maven cohort equivalent: $2,400</span><br>
+              &bull; Live Q&amp;As with Uri Levine, Harry Stebbings, Zack Kass, Felix Haas <span style="color:var(--muted)">&middot; Section equivalent: $2,400</span><br>
+              &bull; 10,000+ alumni community + 4-city in-person events <span style="color:var(--muted)">&middot; On Deck equivalent: $2,700</span><br>
+              &bull; New modules added monthly &mdash; yours for life <span style="color:var(--muted)">&middot; $2,000/yr value</span><br>
+              &bull; $100K+ in AI &amp; software tool deals <span style="color:var(--muted)">&middot; $2,000 realistic redemption</span><br><br>
+              <strong>Total stacked value: $14,775. Today: $1,715 (lifetime). After your timer hits zero: $1,995 (1-year only).</strong><br><br>
+              [ FINISH ENROLLMENT &mdash; LOCK LIFETIME &rarr; ]<br><br>
+              &mdash; Roy<br><br>
+              <em>P.S. 15-day guarantee still stands. Try the first 3 modules, find one decision worth $1,715. If you can't, full refund &mdash; and you keep every PDF you downloaded.</em>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- AC #4 -->
   <div class="email-card">
     <div class="email-head" onclick="toggleRec(this)">
       <div class="email-num">AC #4</div>
-      <div class="email-title">Marisha &mdash; I want to make sure you don't miss this week's events &mdash; Ariel</div>
-      <div class="email-trigger">Day 4 &middot; From Ariel</div>
+      <div class="email-title">Marisha &mdash; Ariel here. The lifetime offer closes in 10 hours.</div>
+      <div class="email-trigger">Hour 38 &middot; from Ariel</div>
       <div class="rec-toggle">&#9660;</div>
     </div>
     <div class="email-body">
       <div class="rec-section">
-        <div class="rec-section-label">Before / After</div>
+        <div class="rec-section-label">Why this converts better</div>
         <div class="rec-section-content">
-          <div class="email-mock">
-            <div class="email-mock-subject before">I noticed you started looking at the program... 50% off</div>
-          </div>
-          <div class="email-mock" style="border-color:var(--accent)">
-            <div class="email-mock-subject">Marisha &mdash; I want to make sure you don't miss this week's events &mdash; Ariel</div>
-          </div>
+          <p>Founder-from-the-inside voice on day two. The single highest-trust email in the sequence &mdash; Ariel personally writes, reply-to goes to his inbox, no marketing layer between him and the buyer. Lands at hour 38 (10 hours before deadline) so it has time to drive action.</p>
         </div>
       </div>
       <div class="rec-section">
@@ -2834,10 +2829,10 @@ li strong { font-weight: 600; }
             <div class="email-mock-body-preview">
               Hi {{ first_name }},<br><br>
               It's Ariel, co-founder of Augment.<br><br>
-              I'm writing because I want to make sure you understand what you almost joined.<br><br>
+              I noticed you started enrolling about a day and a half ago and didn't finish. I'm writing because the lifetime window closes in 10 hours and I want to make sure you understand what you almost joined.<br><br>
               The Augment MBA isn't a course you finish. It's <span class="acc">lifetime access</span> &mdash; every module, every weekly office hour, every new course we add each month, for the rest of your career.<br><br>
-              And this week specifically: Harry Stebbings is doing a live Q&amp;A on fundraising in 2026 (Thursday 7pm ET), and we've got an NYC member meetup at WeWork SoHo (Wednesday). Buy this week to be in the room. Next week is a different lineup &mdash; not better or worse, just different.<br><br>
-              Your countdown timer is running. When it hits zero the offer becomes $1,995 for 1-year access, not lifetime.<br><br>
+              This week specifically: Harry Stebbings is doing a live Q&amp;A on fundraising (Thursday 7pm ET), and we've got an NYC member meetup at WeWork SoHo (Wednesday). Buy in the next 10 hours to be in the room.<br><br>
+              In 10 hours the offer becomes $1,995 for 1-year access, not lifetime. The 40% off is gone. This week's events are gone.<br><br>
               [ FINISH ENROLLMENT &mdash; LOCK LIFETIME &rarr; ]<br><br>
               If you have questions, just reply &mdash; this address goes to me directly.<br><br>
               See you inside,<br>
@@ -2851,79 +2846,67 @@ li strong { font-weight: 600; }
     </div>
   </div>
 
+  <!-- AC #5 -->
   <div class="email-card">
     <div class="email-head" onclick="toggleRec(this)">
       <div class="email-num">AC #5</div>
-      <div class="email-title">48 hours left to lock in lifetime &mdash; Roy</div>
-      <div class="email-trigger">Day 5 &middot; From Roy</div>
+      <div class="email-title">4 hours. Lifetime becomes 1-year tonight.</div>
+      <div class="email-trigger">Hour 44 &middot; from Roy</div>
       <div class="rec-toggle">&#9660;</div>
     </div>
     <div class="email-body">
       <div class="rec-section">
-        <div class="rec-section-label">Before / After</div>
+        <div class="rec-section-label">Why this converts better</div>
         <div class="rec-section-content">
-          <div class="email-mock">
-            <div class="email-mock-subject before">50% discount for the next 48 hours</div>
-          </div>
-          <div class="email-mock" style="border-color:var(--accent)">
-            <div class="email-mock-subject">48 hours left to lock in lifetime &mdash; Roy</div>
-          </div>
+          <p>Tight final push. No new pitch &mdash; just the math, the deadline, the CTA. The buyer who's still on the fence at hour 44 doesn't need more reasons; they need the deadline pressure crystal clear.</p>
         </div>
       </div>
       <div class="rec-section">
-        <div class="rec-section-label">Why this converts better</div>
+        <div class="rec-section-label">Body preview</div>
         <div class="rec-section-content">
-          <p>Same urgency window (48 hours), but the asset shifts from "discount" to "lifetime." Buyers wait through discount windows. They don't wait through permanent-asset windows.</p>
+          <div class="email-mock">
+            <div class="email-mock-body-preview">
+              Hi {{ first_name }},<br><br>
+              4 hours left.<br><br>
+              <span class="acc">After tonight: $1,995 for 1-year access, not lifetime. 40% off gone. $280 more for less.</span><br><br>
+              [ FINISH ENROLLMENT &mdash; LOCK LIFETIME &rarr; ]<br><br>
+              &mdash; Roy<br><br>
+              <em>P.S. 15-day guarantee still stands. Try the first 3 modules, find one decision worth $1,715. If you can't, full refund &mdash; and you keep every PDF you downloaded.</em>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- AC #6 -->
   <div class="email-card">
     <div class="email-head" onclick="toggleRec(this)">
       <div class="email-num">AC #6</div>
-      <div class="email-title">Last chance &mdash; this week's events end Sunday, timer resets next week</div>
-      <div class="email-trigger">Day 6</div>
+      <div class="email-title">Final hour. Door closes at midnight.</div>
+      <div class="email-trigger">Hour 47 &middot; from Roy</div>
       <div class="rec-toggle">&#9660;</div>
     </div>
     <div class="email-body">
-      <div class="rec-section">
-        <div class="rec-section-label">Before / After</div>
-        <div class="rec-section-content">
-          <div class="email-mock">
-            <div class="email-mock-subject before">Free class: Master the art of the pitch deck</div>
-          </div>
-          <div class="email-mock" style="border-color:var(--accent)">
-            <div class="email-mock-subject">Last chance &mdash; this week's events end Sunday, timer resets next week</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="email-card">
-    <div class="email-head" onclick="toggleRec(this)">
-      <div class="email-num">AC #7</div>
-      <div class="email-title">Final 6 hours &mdash; lifetime access closes at midnight</div>
-      <div class="email-trigger">Day 7 &middot; Final</div>
-      <div class="rec-toggle">&#9660;</div>
-    </div>
-    <div class="email-body">
-      <div class="rec-section">
-        <div class="rec-section-label">Before / After</div>
-        <div class="rec-section-content">
-          <div class="email-mock">
-            <div class="email-mock-subject before">You'll never look at ChatGPT the same way again</div>
-          </div>
-          <div class="email-mock" style="border-color:var(--accent)">
-            <div class="email-mock-subject">Final 6 hours &mdash; lifetime access closes at midnight</div>
-          </div>
-        </div>
-      </div>
       <div class="rec-section">
         <div class="rec-section-label">Why this converts better</div>
         <div class="rec-section-content">
-          <p>Specific deadline (6 hours), specific cutoff (midnight), specific asset (lifetime access). Three concrete details vs zero curiosity hook.</p>
+          <p>Two sentences. One CTA. The buyer either clicks or doesn't &mdash; no fluff at this point. Sent at hour 47 so it lands in their inbox right as they're checking phones one more time before bed.</p>
+        </div>
+      </div>
+      <div class="rec-section">
+        <div class="rec-section-label">Body preview</div>
+        <div class="rec-section-content">
+          <div class="email-mock">
+            <div class="email-mock-body-preview">
+              Hi {{ first_name }},<br><br>
+              Final hour. The lifetime offer at $1,715 closes at midnight.<br><br>
+              <span class="acc">After midnight: $1,995 for 1-year access only.</span><br><br>
+              [ FINISH ENROLLMENT &mdash; LOCK LIFETIME &rarr; ]<br><br>
+              &mdash; Roy<br><br>
+              <em>P.S. 15-day guarantee still stands. Try the first 3 modules, find one decision worth $1,715. If you can't, full refund &mdash; and you keep every PDF you downloaded.</em>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2932,7 +2915,7 @@ li strong { font-weight: 600; }
   <div class="callout-light">
     <div class="callout-light-kicker">The pattern</div>
     <div class="callout-light-text">
-      Every email leads with the <strong>specific asset</strong> (lifetime access) &times; the <strong>specific deadline</strong> (timer-based, this week's events, 48 hours, 6 hours) &times; the <strong>specific consequence</strong> (post-timer = $1,995 + 1-year access only). The team currently does 60-70% open rates with $0-4K revenue per send. With this frame: expected $8-20K per send.
+      Six emails over a single 48-hour window &mdash; last three stacked on day two as deadline pressure compounds. Every email leads with the <strong>specific asset</strong> (lifetime access) &times; the <strong>specific hour count</strong> (47h, 36h, 23h, 10h, 4h, 1h) &times; the <strong>specific consequence</strong> ($1,995 / 1-year after window closes). Emails 1&ndash;3 deliver product depth (what's in the box, social proof + insight recap, value stack). Emails 4&ndash;6 deliver pure urgency. The team currently does 60-70% open rates with $0-4K revenue per send. With this frame: expected $8-20K per send.
     </div>
   </div>
 
@@ -4950,7 +4933,7 @@ li strong { font-weight: 600; }
       </div>
       <div class="roadmap-item">
         <div class="roadmap-item-icon">→</div>
-        <div class="roadmap-item-text"><strong>Rewrite the 7-email AC sequence</strong> using permanence &times; urgency frame. Catalog REC #08. Same sequence reroutes for AI page abandoners.</div>
+        <div class="roadmap-item-text"><strong>Rewrite the AC sequence to 6 emails over 48 hours</strong> using permanence &times; urgency frame. Catalog REC #08. Same sequence reroutes for AI page abandoners.</div>
       </div>
       <div class="roadmap-item">
         <div class="roadmap-item-icon">→</div>
