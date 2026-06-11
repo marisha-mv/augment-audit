@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Augment × WCM — Path to $20M · Strategic Proposal · June 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=JetBrains+Mono:wght@400;500;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0A0A0A;
+  --ink-soft: #1A1A1A;
+  --ink-faint: #2A2A2A;
+  --paper: #FAFAF7;
+  --paper-soft: #F2F0E8;
+  --paper-warm: #E8E4D6;
+  --rule: #D9D4C2;
+  --rule-soft: #ECE8DC;
+  --accent: #C5F542;
+  --accent-hot: #B8E635;
+  --accent-dark: #5A7E12;
+  --accent-deep: #3F5A0A;
+  --muted: #6B6B66;
+  --muted-soft: #9A958A;
+  --hot: #C24A2A;
+  --hot-soft: #F2C9BD;
+  --serif: 'Fraunces', 'Tiempos Headline', Georgia, serif;
+  --sans: 'Inter Tight', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.topbar { background: var(--ink); color: var(--paper); padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--ink); font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+.topbar-left { display: flex; align-items: center; gap: 24px; }
+.topbar-logo { font-family: var(--serif); font-weight: 700; font-size: 20px; text-transform: none; letter-spacing: -0.02em; color: var(--accent); }
+.topbar-meta { opacity: 0.6; }
+.topbar-right { display: flex; gap: 24px; opacity: 0.7; }
+.container { max-width: 1180px; margin: 0 auto; padding: 72px 32px 120px; }
+.container-wide { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+.kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; display: flex; gap: 12px; align-items: center; }
+.kicker::after { content: ''; flex: 1; height: 1px; background: var(--rule); max-width: 200px; }
+h1.display { font-family: var(--serif); font-weight: 400; font-size: clamp(42px, 6vw, 76px); line-height: 0.98; letter-spacing: -0.04em; margin-bottom: 32px; font-variation-settings: "opsz" 144; }
+h1.display em { font-style: italic; font-weight: 300; color: var(--muted); }
+h1.display .hl { background: var(--accent); padding: 0 12px; margin: 0 -2px; font-style: normal; color: var(--ink); }
+h2.section { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 4.5vw, 48px); line-height: 1.02; letter-spacing: -0.03em; margin-bottom: 24px; margin-top: 80px; font-variation-settings: "opsz" 144; }
+h2.section em { font-style: italic; font-weight: 300; color: var(--muted); }
+h3 { font-family: var(--serif); font-weight: 500; font-size: 24px; letter-spacing: -0.02em; margin-bottom: 16px; margin-top: 36px; line-height: 1.2; }
+h4 { font-family: var(--sans); font-weight: 600; font-size: 13px; letter-spacing: 0.05em; margin-bottom: 12px; margin-top: 28px; text-transform: uppercase; color: var(--ink); }
+p { margin-bottom: 18px; max-width: 76ch; font-size: 16px; line-height: 1.65; }
+.lede { font-family: var(--serif); font-weight: 300; font-size: clamp(21px, 2.1vw, 26px); line-height: 1.34; letter-spacing: -0.01em; margin-bottom: 36px; color: var(--ink); max-width: 80ch; }
+.lede em { font-style: italic; color: var(--muted); }
+.lede strong { font-weight: 500; }
+strong { font-weight: 600; }
+em { font-style: italic; }
+.masthead-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding: 32px 0; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); margin-top: 36px; }
+.meta-item { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+.meta-label { color: var(--muted); margin-bottom: 6px; }
+.meta-value { color: var(--ink); font-weight: 500; }
+.callout { background: var(--ink); color: var(--paper); padding: 40px; margin: 48px 0; position: relative; }
+.callout-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+.callout-text { font-family: var(--serif); font-weight: 300; font-size: clamp(22px, 2.2vw, 28px); line-height: 1.35; letter-spacing: -0.01em; }
+.callout-text strong { font-weight: 500; color: var(--accent); }
+.callout-text em { font-style: italic; color: rgba(250,250,247,0.65); }
+.callout-light { background: var(--paper-warm); color: var(--ink); padding: 32px 40px; margin: 40px 0; border-left: 3px solid var(--accent); }
+.callout-light-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 12px; font-weight: 700; }
+.callout-light-text { font-family: var(--serif); font-weight: 400; font-size: 19px; line-height: 1.45; letter-spacing: -0.005em; max-width: 80ch; }
+.callout-light-text strong { color: var(--ink); font-weight: 600; }
+.callout-light-text em { font-style: italic; color: var(--muted); }
+ul, ol { margin: 16px 0 24px 24px; }
+li { margin-bottom: 10px; max-width: 76ch; line-height: 1.6; }
+li strong { font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-family: var(--sans); font-size: 14px; margin: 24px 0; }
+table thead tr { border-top: 2px solid var(--ink); border-bottom: 1px solid var(--rule); }
+table thead th { padding: 12px 14px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; font-weight: 700; text-align: left; }
+table thead th.num { text-align: right; }
+table tbody tr { border-bottom: 1px solid var(--rule); }
+table tbody td { padding: 12px 14px; vertical-align: top; }
+table tbody td.num { text-align: right; font-family: var(--mono); font-weight: 500; }
+table tbody td.num.hot { color: var(--accent-dark); font-weight: 700; }
+table tbody tr.total { border-top: 2px solid var(--ink); background: var(--ink); color: var(--paper); }
+table tbody tr.total td { padding: 14px; font-weight: 700; }
+table tbody tr.total td.num { color: var(--accent); font-size: 16px; }
+.rung-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; margin: 32px 0; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+.rung { padding: 28px 24px; border-right: 1px solid var(--rule); }
+.rung:last-child { border-right: none; }
+.rung-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-dark); font-weight: 700; margin-bottom: 8px; }
+.rung-name { font-family: var(--serif); font-weight: 500; font-size: 24px; letter-spacing: -0.015em; line-height: 1.1; margin-bottom: 8px; }
+.rung-job { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 16px; color: var(--muted); margin-bottom: 16px; }
+.rung-body { font-size: 14px; line-height: 1.5; color: var(--ink); }
+.rung-body strong { font-weight: 600; }
+.rung-price { font-family: var(--mono); font-size: 13px; color: var(--accent-dark); font-weight: 700; margin-bottom: 12px; }
+.spacer-lg { height: 56px; }
+.spacer-md { height: 32px; }
+.footnote { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 24px; margin-top: 64px; line-height: 1.55; max-width: 80ch; }
+.footnote strong { color: var(--ink); }
+
+/* ===== CALCULATOR STYLES ===== */
+.calc-wrapper { background: var(--ink); color: var(--paper); padding: 48px 0; margin: 64px -32px 64px -32px; }
+.calc-inner { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+.calc-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 36px; gap: 32px; flex-wrap: wrap; }
+.calc-title { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.5vw, 42px); line-height: 1.05; letter-spacing: -0.025em; color: var(--paper); flex: 1; min-width: 320px; }
+.calc-title em { font-style: italic; color: rgba(250,250,247,0.55); }
+.calc-instruct { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); max-width: 280px; line-height: 1.55; }
+
+.calc-grid { display: grid; grid-template-columns: 380px 1fr; gap: 48px; align-items: start; }
+@media (max-width: 920px) { .calc-grid { grid-template-columns: 1fr; } .calc-wrapper { margin: 64px -16px; } .calc-inner { padding: 0 24px; } }
+
+.inputs { background: var(--ink-soft); padding: 28px 24px; border: 1px solid var(--ink-faint); }
+.input-group { margin-bottom: 18px; }
+.input-group.lever { background: rgba(197,245,66,0.08); padding: 16px 14px; margin: 24px -10px; border-left: 3px solid var(--accent); }
+.input-group.lever .input-label { color: var(--accent); }
+.input-label { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,250,247,0.7); font-weight: 700; }
+.input-value { color: var(--paper); font-weight: 700; font-size: 13px; letter-spacing: 0.04em; }
+.input-group.lever .input-value { color: var(--accent); font-size: 14px; }
+input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 3px; background: rgba(250,250,247,0.15); outline: none; border-radius: 0; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 14px; height: 14px; background: var(--paper); cursor: pointer; border-radius: 50%; }
+input[type="range"]::-moz-range-thumb { width: 14px; height: 14px; background: var(--paper); cursor: pointer; border-radius: 50%; border: none; }
+input[type="range"].lever-input { background: rgba(197,245,66,0.2); }
+input[type="range"].lever-input::-webkit-slider-thumb { background: var(--accent); width: 18px; height: 18px; }
+input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); width: 18px; height: 18px; }
+.input-divider { height: 1px; background: rgba(250,250,247,0.1); margin: 24px 0 18px 0; }
+.input-divider-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(250,250,247,0.4); margin: 18px 0 14px 0; font-weight: 700; }
+
+.outputs { display: flex; flex-direction: column; gap: 20px; }
+.output-headline { background: var(--paper); color: var(--ink); padding: 32px 28px; }
+.output-headline-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 8px; }
+.output-headline-value { font-family: var(--serif); font-weight: 500; font-size: clamp(48px, 6vw, 72px); line-height: 1.0; letter-spacing: -0.03em; font-variation-settings: "opsz" 144; }
+.output-headline-value.green { color: var(--accent-deep); }
+.output-headline-value.amber { color: #C28A1A; }
+.output-headline-value.red { color: var(--hot); }
+.output-headline-delta { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 6px; font-weight: 700; letter-spacing: 0.04em; }
+.output-headline-delta.green { color: var(--accent-deep); }
+.output-headline-delta.red { color: var(--hot); }
+.output-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.output-tile { background: var(--ink-soft); padding: 20px 18px; border: 1px solid var(--ink-faint); }
+.output-tile-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,250,247,0.55); font-weight: 700; margin-bottom: 6px; }
+.output-tile-value { font-family: var(--serif); font-weight: 500; font-size: 24px; line-height: 1.0; letter-spacing: -0.015em; color: var(--paper); font-variation-settings: "opsz" 144; }
+.output-tile-value.green { color: var(--accent); }
+.output-tile-value.red { color: #E89178; }
+.output-tile-sub { font-family: var(--mono); font-size: 10px; color: rgba(250,250,247,0.5); margin-top: 4px; }
+
+.year-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.year-tile { background: var(--ink-soft); padding: 18px 18px; border: 1px solid var(--ink-faint); }
+.year-tile-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,250,247,0.55); font-weight: 700; margin-bottom: 8px; }
+.year-tile-value { font-family: var(--serif); font-weight: 500; font-size: 26px; line-height: 1.0; letter-spacing: -0.015em; color: var(--paper); font-variation-settings: "opsz" 144; }
+
+.sens-table { background: var(--ink-soft); padding: 24px; margin-top: 8px; border: 1px solid var(--ink-faint); }
+.sens-title { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,250,247,0.6); font-weight: 700; margin-bottom: 14px; }
+.sens-grid { display: grid; grid-template-columns: 80px 1fr 1fr 1fr; gap: 0; font-family: var(--mono); font-size: 12px; }
+.sens-grid > div { padding: 8px 10px; border-bottom: 1px solid rgba(250,250,247,0.07); }
+.sens-grid > div.head { font-size: 9px; letter-spacing: 0.1em; color: rgba(250,250,247,0.5); text-transform: uppercase; font-weight: 700; border-bottom: 1px solid rgba(250,250,247,0.15); }
+.sens-grid > div.cell-num { text-align: right; color: rgba(250,250,247,0.85); font-weight: 500; }
+.sens-grid > div.active { background: rgba(197,245,66,0.1); color: var(--accent); font-weight: 700; }
+.sens-grid > div.active.cell-num { color: var(--accent); }
+
+.calc-footer { margin-top: 28px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; color: rgba(250,250,247,0.45); line-height: 1.55; max-width: 760px; }
+.calc-footer strong { color: var(--accent); font-weight: 700; }
+
+.what-not { background: var(--paper-soft); padding: 28px 32px; margin: 32px 0; border-left: 3px solid var(--ink); }
+.what-not h4 { margin-top: 0; }
+.what-not ul { margin-bottom: 0; }
+.what-not li { font-size: 14px; line-height: 1.5; }
+
+.phase-grid { display: grid; grid-template-columns: 110px 1fr 200px; gap: 16px; margin: 24px 0; padding: 0; }
+.phase-row { display: contents; }
+.phase-row > div { padding: 14px 0; border-bottom: 1px solid var(--rule); font-size: 14px; line-height: 1.5; align-self: baseline; }
+.phase-row:first-child > div { border-top: 1px solid var(--ink); }
+.phase-num { font-family: var(--mono); font-weight: 700; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-dark); }
+.phase-when { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.04em; text-align: right; padding-top: 16px !important; }
+
+/* ===== PRESET BUTTONS ===== */
+.preset-bar { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; align-items: center; }
+.preset-bar-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(250,250,247,0.45); font-weight: 700; margin-right: 8px; }
+.preset-btn { background: transparent; color: rgba(250,250,247,0.6); border: 1px solid rgba(250,250,247,0.2); padding: 8px 16px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; cursor: pointer; transition: all 0.15s ease; }
+.preset-btn:hover { color: var(--paper); border-color: rgba(250,250,247,0.5); }
+.preset-btn.active { background: var(--accent); color: var(--ink); border-color: var(--accent); }
+.preset-btn .preset-target { display: block; font-size: 9px; opacity: 0.65; margin-top: 3px; letter-spacing: 0.06em; font-weight: 500; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-logo">WCM</div>
+    <div class="topbar-meta">Phase 2 · Strategic proposal · June 2026</div>
+  </div>
+  <div class="topbar-right">
+    <div>For: Theodore Moret, Augment.org</div>
+    <div>Prepared by: Marisha Lakhiani</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="kicker">Phase 2 strategic proposal</div>
+
+  <h1 class="display">
+    $20M is a <em>three-rung</em><br>
+    ladder. The variable<br>
+    that decides it: <span class="hl">community</span><br>
+    <em>quality</em>.
+  </h1>
+
+  <p class="lede">
+    The Phase 1 audit optimized Augment's existing $1,715 lifetime funnel. This proposal answers a layer above: <strong>what's the offer architecture that scales Augment from $9M to $20M+ by Year 3, and what does it require to build.</strong> The answer is not a better offer. It's a bigger customer base, monetized over multiple years through a structurally sound three-rung ladder. The strategic argument and the math are in this document. The model is interactive &mdash; flex the inputs to pressure-test the assumptions.
+  </p>
+
+  <div class="masthead-meta">
+    <div class="meta-item">
+      <div class="meta-label">Current state</div>
+      <div class="meta-value">$9M Stripe (annualized)</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Year 3 target</div>
+      <div class="meta-value">$20M+</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Primary lever</div>
+      <div class="meta-value">Continuity take rate</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-label">Variable to invest in</div>
+      <div class="meta-value">Community quality</div>
+    </div>
+  </div>
+
+  <h2 class="section">The baseline correction we should make first.</h2>
+
+  <p>
+    Before the strategic argument, one calibration that changes the framing. The audit's $5.5M base is Meta-attributed, not company-wide. The $9M Stripe figure is total revenue across all channels &mdash; Meta, LinkedIn, affiliate, direct, partnerships. The audit's footnotes put Stripe gross 30-40% above the Meta line.
+  </p>
+
+  <p>
+    Expressed in total-company terms, <strong>the audit's Year-2 figure is materially higher than $8.8M</strong>. The "the plan lands us where we are today" framing compares a slice (Meta-attributed) to the whole (company total). That's a meaningful but recoverable misread. <em>That said, the audit's ambition is calibrated to Phase 1 optimization &mdash; not to the $20M question.</em> This proposal answers the $20M question separately.
+  </p>
+
+  <h2 class="section">The two questions $20M requires answering.</h2>
+
+  <p>
+    $20M by Year 3 requires two things simultaneously, and they are not interchangeable:
+  </p>
+
+  <ol>
+    <li><strong>Grow the customer base</strong> &mdash; remove the $1,715 commitment barrier that caps Meta acquisition. A $1,715 entry price only converts buyers who can write the check on a Meta impulse, and that pool is small. The well runs dry at current ROAS levels.</li>
+    <li><strong>Monetize the base over multiple years</strong> &mdash; through recurring revenue, ascension upsells, and a community that members will pay to stay inside. Acquisition alone cannot do $20M; the math doesn't support it at Augment's CAC.</li>
+  </ol>
+
+  <p>
+    Optimization (the audit) addresses neither structurally. It improves Phase 1 economics but cannot remove the price-point ceiling or build the renewal stack. <strong>Both questions need a different offer architecture.</strong>
+  </p>
+
+  <h2 class="section">Why lifetime caps the model.</h2>
+
+  <p>
+    The $1,715 lifetime offer works today &mdash; it's a profitable transaction with $520+ contribution per buyer after CAC. But it has a structural ceiling that becomes visible at scale: <strong>lifetime buyers don't necessarily consume what they bought</strong>. They paid for it. It's theirs forever. There's no deadline, no renewal decision, no expiring access &mdash; so most defer engagement to "later," which often means never.
+  </p>
+
+  <p>
+    The downstream consequence is what kills the $20M path: <strong>if a lifetime buyer never consumed the product, you cannot sell them other things</strong>. The next-product pitch lands on someone who hasn't experienced the first product enough to trust the second. Workshop tickets, premium community, advanced programs &mdash; all of it falls flat on a member who never made it past Module 3.
+  </p>
+
+  <div class="callout">
+    <div class="callout-kicker">The flywheel cost of lifetime</div>
+    <div class="callout-text">
+      Lifetime <em>maximizes acquisition revenue per buyer</em> but <em>minimizes engagement</em>. The hidden cost isn't delivery &mdash; they already paid. <strong>It's the lost flywheel: no consumption means no testimonials, no referrals, no case studies, no expansion revenue.</strong>
+    </div>
+  </div>
+
+  <p>
+    A continuity product where engagement is structurally required fixes the flywheel. <strong>The proposal keeps lifetime as Rung 2 (it's still the most profitable single transaction Augment can run) and adds continuity as Rung 3</strong>. The two coexist because they serve different buyer mentalities &mdash; lifetime for the buyer who wants ownership, continuity for the buyer who wants ongoing access to people, programming, and updates.
+  </p>
+
+  <h2 class="section">The Day-One AOV principle.</h2>
+
+  <p>
+    Theo's read of the subscription tests is that "subscription doesn't work for us." That's the wrong conclusion. What the tests actually proved is sharper, and it generalizes to a principle the team can apply to every front-end decision they make.
+  </p>
+
+  <p>
+    <strong>Test 1</strong> (cold annual sub, $399, ~$800 CAC, 0.5x ROAS) was doomed before it ran &mdash; not because subscription was wrong, but because the entire economic logic of subscription lives in the renewal. They never got to measure renewal. Selling cold means eating the full $800 CAC against a single $399 first period. That guarantees ~0.5x regardless of product quality. <em>They didn't test subscription. They tested whether you can pay $800 to collect $399 once. The answer is always no.</em>
+  </p>
+
+  <p>
+    <strong>Test 2</strong> is better than the read suggests. The winning horse (AI Prompting) generated 150 buyers at ~$181 CAC against ~$27K spend &mdash; $22K front-end booked = 0.82x on the front end alone. Add the 10% sub take at $399 (~$6K) and that horse is <strong>~1.0x on day zero, before a single renewal and before anyone converts to the $1,715 core</strong>. That's not a failing funnel &mdash; that's break-even acquisition with two unmeasured upside levers still in front of it. The blended 0.6x is hiding the winner because the dog offers (Fundraising, AI Strategy) drag the average down.
+  </p>
+
+  <div class="callout-light">
+    <div class="callout-light-kicker">The principle that resolves the strategic disagreement</div>
+    <div class="callout-light-text">
+      <strong>Day-one AOV must clear CAC.</strong> Whatever the front end is &mdash; subscription or one-time offer &mdash; the cash collected on the first transaction (entry + immediate upsells) must be &ge; acquisition cost. Everything behind that is profit.<br><br>
+      Test 1 failed this rule ($399 day-one cash vs $800 CAC). Test 2's winning horse nearly passes it (~1.0x). <em>The blanket "never sell sub cold" is too absolute. The precise version: never let day-one AOV sit below CAC.</em>
+    </div>
+  </div>
+
+  <h2 class="section">The three-rung ladder.</h2>
+
+  <p>
+    The architecture that solves both questions. Each rung does one job. None compensates for the others.
+  </p>
+
+  <div class="rung-grid">
+    <div class="rung">
+      <div class="rung-label">Rung 1</div>
+      <div class="rung-name">Self-liquidating front end</div>
+      <div class="rung-job">Acquire customers at zero net cost</div>
+      <div class="rung-price">$149&ndash;$349 entry</div>
+      <div class="rung-body">
+        Tripwire stack ($149 AI Prompting Cert is the winning horse from Test 2). Day-one OTO stack engineered so AOV &ge; CAC. <strong>Goal is acquisition, not profit.</strong> Kill the dog offers (Fundraising, AI Strategy), scale the horse, build new horses across programs. By Year 3: 25K&ndash;30K buyers/yr at break-even.
+      </div>
+    </div>
+    <div class="rung">
+      <div class="rung-label">Rung 2</div>
+      <div class="rung-name">$1,715 Lifetime MBA</div>
+      <div class="rung-job">Upfront cash and margin</div>
+      <div class="rung-price">$1,715 (unchanged)</div>
+      <div class="rung-body">
+        The proven transformation, paid upfront. Continues as the current cold catalog + AI funnel offer AND sold via 72-hour upsell from front-end buyers. <strong>This is the profit center. Do not touch it.</strong> By Year 3: 3,500&ndash;4,000 buyers/yr at higher conversion (~12% from a larger front-end base).
+      </div>
+    </div>
+    <div class="rung">
+      <div class="rung-label">Rung 3</div>
+      <div class="rung-name">Augment Membership</div>
+      <div class="rung-job">Compounding LTV</div>
+      <div class="rung-price">$1,500/yr · sold warm</div>
+      <div class="rung-body">
+        Annual continuity sold to MBA grads + engaged front-end buyers (CAC &asymp; 0). Community access, monthly faculty AMA, quarterly content drops, member directory, tool deals stack. <strong>Workshops are a paid upsell on top, not bundled.</strong> Multi-year prepay offered at renewal. Lifetime Founder upgrade at $1,999 for engaged members (capped 200/year).
+      </div>
+    </div>
+  </div>
+
+  <p>
+    The economic logic is sequencing. Rung 1 acquires cheap, qualified buyers and pays for itself on day one. Rung 2 collects upfront cash from the warm subset that's ready to commit. Rung 3 retains and monetizes the rest over multiple years &mdash; this is where the renewal compound lives. <strong>Every year, the recurring base starts with revenue already on the books</strong>, which is the structural difference between a $9M business that resets every January and a $20M business that compounds.
+  </p>
+
+  <h3>Continuity upsells (the LTV layer inside Rung 3)</h3>
+
+  <p>
+    The $1,500/yr base captures access. Per-member revenue compounds via four upsells:
+  </p>
+
+  <ul>
+    <li><strong>Workshop Pass &mdash; $599/yr</strong>: all 12 monthly workshops included. Target take rate 35-45% among members. Pure add-on revenue.</li>
+    <li><strong>À la carte workshop tickets</strong>: $199 member rate, $499-$999 non-member rate. Standalone revenue stream + acquisition channel (checkout upsell to membership).</li>
+    <li><strong>Multi-year prepay at renewal</strong>: $2,499 for 2 years (saves $501, captures cash upfront, eliminates Year 2 renewal risk). Target take rate 25-35% of renewing members.</li>
+    <li><strong>Lifetime Founder upgrade &mdash; $1,999</strong>: engaged members (90+ days active) can upgrade to lifetime continuity-equivalent access. Includes future modules + Workshop Pass renewable at $299/yr forever. Capped at 200/year. Premium positioning, not a discount.</li>
+  </ul>
+
+</div>
+
+<!-- ============ INTERACTIVE CALCULATOR ============ -->
+<div class="calc-wrapper">
+<div class="calc-inner">
+
+  <div class="calc-header">
+    <div class="calc-title">
+      <em>Flex the assumptions.</em><br>The one cell that decides the model.
+    </div>
+    <div class="calc-instruct">
+      The retention slider <span style="color:var(--accent)">(highlighted)</span> is the variable Augment has never measured. Move it. Watch the Year-3 total. The other inputs are yours to argue with.
+    </div>
+  </div>
+
+  <div class="preset-bar">
+    <span class="preset-bar-label">Scenario presets:</span>
+    <button class="preset-btn" data-preset="conservative">Conservative <span class="preset-target">industry standard</span></button>
+    <button class="preset-btn active" data-preset="target">Target <span class="preset-target">$20M plan</span></button>
+    <button class="preset-btn" data-preset="bull">Bull case <span class="preset-target">community-led</span></button>
+  </div>
+
+  <div class="calc-grid">
+
+    <div class="inputs">
+
+      <div class="input-divider-label">Rung 1 &mdash; Front end (self-liquidating)</div>
+
+      <div class="input-group">
+        <div class="input-label"><span>Front-end buyers / year</span><span class="input-value" id="lbl_buyers">30,000</span></div>
+        <input type="range" id="in_buyers" min="5000" max="50000" step="1000" value="30000">
+      </div>
+
+      <div class="input-group">
+        <div class="input-label"><span>Day-one AOV (entry + OTO)</span><span class="input-value" id="lbl_aov">$200</span></div>
+        <input type="range" id="in_aov" min="100" max="400" step="10" value="200">
+      </div>
+
+      <div class="input-group">
+        <div class="input-label"><span>Front-end CAC</span><span class="input-value" id="lbl_cac">$185</span></div>
+        <input type="range" id="in_cac" min="100" max="300" step="5" value="185">
+      </div>
+
+      <div class="input-divider-label">Rung 2 &mdash; Core ($1,715 lifetime)</div>
+
+      <div class="input-group">
+        <div class="input-label"><span>Front-end &rarr; core conversion</span><span class="input-value" id="lbl_core_conv">12%</span></div>
+        <input type="range" id="in_core_conv" min="0.05" max="0.20" step="0.005" value="0.12">
+      </div>
+
+      <div class="input-group">
+        <div class="input-label"><span>Core price</span><span class="input-value" id="lbl_core_price">$1,715</span></div>
+        <input type="range" id="in_core_price" min="1500" max="2500" step="50" value="1715">
+      </div>
+
+      <div class="input-divider-label">Rung 3 &mdash; Continuity (sold warm)</div>
+
+      <div class="input-group">
+        <div class="input-label"><span>Take rate &mdash; from core buyers</span><span class="input-value" id="lbl_take_core">25%</span></div>
+        <input type="range" id="in_take_core" min="0.05" max="0.40" step="0.01" value="0.25">
+      </div>
+
+      <div class="input-group">
+        <div class="input-label"><span>Take rate &mdash; from non-core front-end</span><span class="input-value" id="lbl_take_noncore">5%</span></div>
+        <input type="range" id="in_take_noncore" min="0.01" max="0.10" step="0.005" value="0.05">
+      </div>
+
+      <div class="input-group">
+        <div class="input-label"><span>Continuity price / yr</span><span class="input-value" id="lbl_cont_price">$1,500</span></div>
+        <input type="range" id="in_cont_price" min="999" max="3000" step="100" value="1500">
+      </div>
+
+      <div class="input-group lever">
+        <div class="input-label"><span>Annual retention &nbsp; &laquo; the lever</span><span class="input-value" id="lbl_retention">55%</span></div>
+        <input type="range" id="in_retention" min="0.15" max="0.80" step="0.05" value="0.55" class="lever-input">
+      </div>
+
+      <div class="input-divider-label">Continuity upsells</div>
+
+      <div class="input-group">
+        <div class="input-label"><span>Workshop Pass take rate</span><span class="input-value" id="lbl_pass_take">40%</span></div>
+        <input type="range" id="in_pass_take" min="0.10" max="0.60" step="0.05" value="0.40">
+      </div>
+
+      <div class="input-group">
+        <div class="input-label"><span>Workshop Pass price</span><span class="input-value" id="lbl_pass_price">$599</span></div>
+        <input type="range" id="in_pass_price" min="299" max="999" step="50" value="599">
+      </div>
+
+      <div class="input-group">
+        <div class="input-label"><span>Lifetime Founder upgrade take (Y2+)</span><span class="input-value" id="lbl_lf_take">5%</span></div>
+        <input type="range" id="in_lf_take" min="0.02" max="0.15" step="0.01" value="0.05">
+      </div>
+
+    </div>
+
+    <div class="outputs">
+
+      <div class="output-headline">
+        <div class="output-headline-label">Year 3 Total Revenue</div>
+        <div class="output-headline-value" id="out_y3">$17.8M</div>
+        <div class="output-headline-delta" id="out_y3_delta">$2.2M under $20M target</div>
+      </div>
+
+      <div class="year-strip">
+        <div class="year-tile">
+          <div class="year-tile-label">Year 1</div>
+          <div class="year-tile-value" id="out_y1">$12.7M</div>
+        </div>
+        <div class="year-tile">
+          <div class="year-tile-label">Year 2</div>
+          <div class="year-tile-value" id="out_y2">$15.6M</div>
+        </div>
+        <div class="year-tile">
+          <div class="year-tile-label">Year 3</div>
+          <div class="year-tile-value" id="out_y3_strip">$17.8M</div>
+        </div>
+      </div>
+
+      <div class="output-row">
+        <div class="output-tile">
+          <div class="output-tile-label">Self-liquidation</div>
+          <div class="output-tile-value" id="out_sl">1.08x</div>
+          <div class="output-tile-sub">AOV / CAC &ge; 1.0x required</div>
+        </div>
+        <div class="output-tile">
+          <div class="output-tile-label">LTV : CAC</div>
+          <div class="output-tile-value" id="out_ratio">2.80x</div>
+          <div class="output-tile-sub">Industry benchmark &ge; 3.0x</div>
+        </div>
+        <div class="output-tile">
+          <div class="output-tile-label">Steady-state members</div>
+          <div class="output-tile-value" id="out_ss_members">2,153</div>
+          <div class="output-tile-sub">new ÷ (1 &minus; retention)</div>
+        </div>
+      </div>
+
+      <div class="sens-table">
+        <div class="sens-title">Retention sensitivity &mdash; same inputs, retention varies</div>
+        <div class="sens-grid" id="sens_grid">
+          <!-- populated by JS -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="calc-footer">
+    <strong>The structural insight:</strong> recurring revenue scales as 1 &divide; (1 &minus; retention). A 25%-retention business and a 60%-retention business are <em>not variations of each other &mdash; they are different companies built on the same ad spend.</em> Augment has never measured continuity retention because they've never sold continuity. The 45% base case is the edtech industry standard. The whole bet is whether community quality lifts it above that line.
+  </div>
+
+</div>
+</div>
+<!-- ============ END CALCULATOR ============ -->
+
+<div class="container">
+
+  <h2 class="section">The retention bet.</h2>
+
+  <p>
+    The single most load-bearing variable in the entire model is continuity retention. Move the slider above between 25% and 65% and watch Year 3 swing by $4-6M. That's the difference between hitting $20M comfortably and missing by $3M.
+  </p>
+
+  <p>
+    Augment has never measured continuity retention because they've never sold continuity. The 45% base case is the edtech industry standard &mdash; not optimistic, not pessimistic. <strong>What kills retention: static content, weak community, no live programming.</strong> What sustains it: continuous new modules, monthly workshops, member-led peer programming, and a community where the relationships are the product.
+  </p>
+
+  <p>
+    The proposal builds in 4-6 new modules per year + 12 monthly workshops + ongoing community curation. That's a $400-600K/yr content + community investment. <strong>Without this, retention collapses to 25-30% and the model breaks.</strong> The content commitment is not optional &mdash; it is the bet.
+  </p>
+
+  <h2 class="section">The take rate concern (and the answer).</h2>
+
+  <p>
+    The honest concern with this model: take rates. Industry standard upsell from a paying customer base to a continuity tier is 10-15%. The optimistic baseline (30% from core buyers, 5% from front-end non-core) is achievable but not guaranteed.
+  </p>
+
+  <p>
+    At realistic take rates (15% core, 3% non-core), the calculator lands Year 3 around $17-18M &mdash; misses $20M target by $2-3M. <strong>The fix isn't pricing or volume &mdash; it's community quality.</strong>
+  </p>
+
+  <p>
+    Best-in-class community-led subscriptions convert at 25-35% from core base because the offer isn't "more content" &mdash; it's "the people in this room are the operator network you need, and you can't get this anywhere else." That's structurally different from "join our community Slack." It requires:
+  </p>
+
+  <ul>
+    <li><strong>Curated peer matching</strong> &mdash; specific intros between operators who can help each other, not "join Slack and figure it out"</li>
+    <li><strong>Member-led programming</strong> &mdash; members teaching members, not just faculty broadcasting</li>
+    <li><strong>High signal-to-noise</strong> &mdash; vetted membership, intentional channels, moderated discussion (the opposite of Discord)</li>
+    <li><strong>Status and recognition</strong> &mdash; members get visibility to founders, faculty, each other</li>
+    <li><strong>Real-world events</strong> &mdash; regional meetups, members-only dinners, an annual summit</li>
+  </ul>
+
+  <div class="callout">
+    <div class="callout-kicker">The strategic investment decision</div>
+    <div class="callout-text">
+      The path to $20M doesn't require more ad spend or new products. <strong>It requires investing in community quality at the same level as content production.</strong> If that investment happens, take rate hits 25-30% and the model exceeds target. If it doesn't, $17-18M is the realistic ceiling. <em>That's the single biggest call Theo has to make.</em>
+    </div>
+  </div>
+
+  <h2 class="section">What we considered and dropped.</h2>
+
+  <p>
+    Several mechanics surfaced in the analysis and didn't make the proposal. Documenting them so the team's questions are answered before they're asked.
+  </p>
+
+  <h3>Subscription as cold-acquisition front door (initial proposal, dropped)</h3>
+
+  <p>
+    Earlier drafts proposed a $499 Basic / $999 Pro subscription as the primary cold-acquisition mechanism on Meta. Dropped. <strong>The Day-One AOV principle showed this fails the same way Test 1 failed</strong> &mdash; $499 or $999 day-one cash cannot carry $400-$800 CAC by itself. Subscription belongs on warm acquisition (MBA grads + engaged tripwire buyers), not cold. The three-rung structure with self-liquidating tripwire as cold acquisition is structurally cleaner.
+  </p>
+
+  <h3>Two-tier sub at $499 Basic + $999 Pro (dropped)</h3>
+
+  <p>
+    The two-tier mechanic added member count but split ARPU. Math: 60% take at $499 + 10% take at $999 generated similar total revenue to 30% take at $1,500 single-tier. <strong>Operational complexity wasn't worth it.</strong> Single $1,500 tier with paid upsells (Workshop Pass, Lifetime Founder) generates the same revenue with simpler product architecture, cleaner conversion math, and one community to manage rather than two.
+  </p>
+
+  <h3>$99/mo cancel-anytime monthly subscription (dropped)</h3>
+
+  <p>
+    The audit's earlier framing of monthly billing as the entry tier. Dropped because monthly cancel-anytime in edtech churns 5-8%/mo &mdash; average tenure 4 months, average revenue per monthly buyer ~$400, doesn't carry $400 CAC. <strong>Replaced with annual commitment</strong> (paid annually or monthly-billed against 12-month contract, same total price, no cancel-anytime option). Eliminates the 4-month churner segment entirely.
+  </p>
+
+  <h3>Credit-redemption tripwire-to-core upsell (dropped)</h3>
+
+  <p>
+    Originally considered: tripwire buyer's $149 becomes a credit applied against $1,715 within 30 days. Dropped. <strong>Buyer needs to understand 5 things to redeem a credit</strong> &mdash; what they paid, that it's now a credit, that it applies to a bigger product, that it expires, where to apply it. Most don't complete those steps. Direct upsell at standard price is a one-step decision and works better.
+  </p>
+
+  <h3>Major B2B / Team Licenses motion at launch (deferred)</h3>
+
+  <p>
+    Earlier drafts proposed building team licenses ($9,995-$25K/yr) as a major Year 1 revenue line. Deferred to Year 3. <strong>Building a corporate sales motion requires a full-time hire, longer sales cycles, and pulls focus from consumer funnel optimization</strong> which is the Year 1 priority. Year 1-2 should run inbound-only on team licenses (small contact link below order menu). Build outbound team sales in Year 3 once consumer funnel is mature.
+  </p>
+
+  <h2 class="section">What we would NOT do.</h2>
+
+  <div class="what-not">
+    <ul>
+      <li><strong>Don't convert the $1,715 lifetime into subscription.</strong> That trades a proven paid-upfront profit center for a leaky $399 that churns the moment members graduate. Most dangerous move on the table.</li>
+      <li><strong>Don't sell continuity cold as the acquisition offer.</strong> Day-One AOV principle. Continuity belongs on warm acquisition only.</li>
+      <li><strong>Don't scale any front-end before day-one AOV &ge; CAC.</strong> The AI Prompting horse is close (~1.0x). Finish the OTO stack engineering before scaling spend.</li>
+      <li><strong>Don't build the entire model on the assumed 45% retention.</strong> Pressure-test the calculator at 25-30% to see what survives. The community investment is what determines which scenario plays out.</li>
+      <li><strong>Don't drop the entry price without pricing in the worse-avatar effect.</strong> A $149 buyer is not a smaller version of a $1,715 buyer &mdash; lower intent, higher churn, more support cost. Model discounts for this.</li>
+      <li><strong>Don't clutter the funnel with four or five offers.</strong> Three rungs. Clean ladder.</li>
+      <li><strong>Don't ask new cheap buyers to prepay 2-3 years upfront.</strong> Multi-year prepay belongs at the renewal / value moment, not at first purchase.</li>
+      <li><strong>Don't ship faculty 1:1 sessions, in-person summit, or Founders Community as Year 1 launch products.</strong> They don't exist today. Build them in Year 2 once the sub base exists and demand is validated. Don't promise what isn't built.</li>
+    </ul>
+  </div>
+
+  <h2 class="section">Sequenced launch &mdash; 18 months.</h2>
+
+  <div class="phase-grid">
+    <div class="phase-row">
+      <div class="phase-num">Phase 1</div>
+      <div><strong>Build & validate.</strong> Subscription page + checkout + member portal + community platform (Circle/Slack) + onboarding sequence + first 3 workshops booked. Soft launch to existing alumni at "Founder Member" rate (capped 200 slots). Goal: 100-150 founding members + Day-90 engagement data on the warm cohort.</div>
+      <div class="phase-when">Months 1-3</div>
+    </div>
+    <div class="phase-row">
+      <div class="phase-num">Phase 2</div>
+      <div><strong>Open cold acquisition.</strong> Subscription opens to warm tripwire buyers + free class graduates. AI Prompting tripwire's OTO stack engineered to clear day-one AOV &ge; CAC. Kill Fundraising and AI Strategy tripwires. Launch Workshop Pass upsell at Month 4. Goal: 800-1,200 paying members by Month 6.</div>
+      <div class="phase-when">Months 4-6</div>
+    </div>
+    <div class="phase-row">
+      <div class="phase-num">Phase 3</div>
+      <div><strong>Scale + measure.</strong> Increase Meta spend on the working tripwire + open Lifetime Founder upgrade flow to engaged members. Instrument Day-30/60/90 retention proxies. First standalone workshop sold to non-members at premium price ($499-$999). Project Year 1 renewal rate from engagement data. Goal: 2,500-3,500 active members by Month 9.</div>
+      <div class="phase-when">Months 7-9</div>
+    </div>
+    <div class="phase-row">
+      <div class="phase-num">Phase 4</div>
+      <div><strong>Compound + decide.</strong> First Year-1 cohort hits renewal decision point. Multi-year prepay offered to engaged members at renewal. Real retention data lands. Decision gate: if retention &ge; 40%, scale aggressively. If retention &lt; 30%, evaluate community investment.</div>
+      <div class="phase-when">Months 10-12</div>
+    </div>
+    <div class="phase-row">
+      <div class="phase-num">Phase 5</div>
+      <div><strong>Year 2 expansion.</strong> Founders Community ($4,999/yr) launches if engagement data supports it. First annual in-person summit if member count justifies (target: 300+ attendees). B2B Team Licenses opens inbound-only with sales handoff to founder. New module velocity sustained at 4-6/yr.</div>
+      <div class="phase-when">Months 13-18</div>
+    </div>
+  </div>
+
+  <h2 class="section">The next move.</h2>
+
+  <p>
+    The cheapest, highest-signal experiment is not another cold Meta test. It's:
+  </p>
+
+  <ol>
+    <li><strong>Pull alumni repeat-purchase data.</strong> Augment has ~10,000+ lifetime buyers. How many have come back to buy a second product (tripwire, additional course, anything)? At what rate over what timeframe? This is the closest proxy available for what continuity retention might look like.</li>
+    <li><strong>Audit the 15 Test-2 sub upsell takers.</strong> Are they still active? What's their 30/60/90 day login rate? Content consumption rate? This is direct subscription engagement data &mdash; small sample, but the only sample that exists.</li>
+    <li><strong>Run a warm continuity offer to existing MBA grads.</strong> Offer $1,500/yr Augment Membership to existing lifetime buyers at near-zero CAC. Measure 30/60/90 day engagement. <strong>If the warm base won't stay, cold never will.</strong> If it does, the engine works and we size it confidently.</li>
+  </ol>
+
+  <p>
+    These three data pulls are 4-8 weeks of work and they gate the entire model. <strong>Before spending a dollar acquiring more customers, measure what retention looks like on customers Augment already has.</strong> Everything else follows from that number.
+  </p>
+
+  <h2 class="section">Phase 2 engagement scope.</h2>
+
+  <p>
+    This proposal is the strategic architecture. Execution is the partnership. WCM is available to lead Phase 2 build-out as a structured engagement:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Workstream</th>
+        <th>Months</th>
+        <th>WCM deliverable</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Retention data audit + warm continuity test</strong></td>
+        <td>0-1</td>
+        <td>Alumni repeat-purchase analysis, Test-2 sub buyer engagement audit, warm continuity pilot offer to existing MBA grads with 90-day retention measurement</td>
+      </tr>
+      <tr>
+        <td><strong>Subscription page architecture + checkout flow</strong></td>
+        <td>1-3</td>
+        <td>Wireframes, copy, Stripe configuration spec, ToS clauses for 12-month commitment + auto-renewal, two billing options (annual upfront vs annual-commitment-monthly-billing)</td>
+      </tr>
+      <tr>
+        <td><strong>Member portal + onboarding sequence</strong></td>
+        <td>2-4</td>
+        <td>Page-level specifications, 14-email automated onboarding sequence, member portal information architecture, Day-30 engagement triggers</td>
+      </tr>
+      <tr>
+        <td><strong>Workshop Pass mechanic + standalone workshop architecture</strong></td>
+        <td>3-5</td>
+        <td>Workshop landing page templates, Pass entitlement logic, standalone-to-sub upsell at workshop checkout, member-rate vs non-member pricing flow</td>
+      </tr>
+      <tr>
+        <td><strong>Lifetime Founder upgrade flow</strong></td>
+        <td>5-7</td>
+        <td>Eligibility logic (90-day active threshold), in-product upgrade prompts, upgrade landing page, communication sequence, 200-slot/yr cap mechanic</td>
+      </tr>
+      <tr>
+        <td><strong>Tripwire OTO stack engineering</strong></td>
+        <td>2-6</td>
+        <td>Front-end AOV math, OTO offer architecture (immediate upsells to clear day-one AOV &ge; CAC), AI Prompting page rebuild, kill Fundraising + AI Strategy tripwires</td>
+      </tr>
+      <tr>
+        <td><strong>Retention + renewal email programs</strong></td>
+        <td>6-12</td>
+        <td>Day-30 re-engagement, mid-year content reminders, pre-renewal sequence, multi-year prepay offer mechanic, post-cancellation win-back</td>
+      </tr>
+      <tr>
+        <td><strong>Performance review + iteration cadence</strong></td>
+        <td>Ongoing</td>
+        <td>Biweekly strategy calls, quarterly testing roadmap, CRO optimization across all three rungs, calculator updates with measured data</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="footnote">
+    This proposal answers the $20M question separately from the Phase 1 audit. Phase 1 (the audit) optimizes the existing $1,715 lifetime funnel and remains valuable as Year 1 baseline work. Phase 2 (this proposal) builds the three-rung architecture that scales Augment from $9M to $20M+ over 36 months. Both engagements are separately scoped. <strong>Phase 2 begins with the retention data audit and the warm continuity test &mdash; before any new product is built &mdash; because the entire model turns on whether the warm base retains.</strong>
+    <br><br>
+    The interactive calculator above is meant to be argued with. <strong>Open this page on the call. Adjust the sliders. Stress-test the assumptions live.</strong> The retention slider is the single most important input. Everything else is engineering.
+  </p>
+
+</div>
+
+<script>
+// ===================== CALCULATOR LOGIC =====================
+const fmt = (n) => '$' + Math.round(n).toLocaleString();
+const fmtM = (n) => '$' + (n / 1000000).toFixed(2) + 'M';
+const fmtPct = (n) => Math.round(n * 100) + '%';
+const fmtPctD = (n) => (n * 100).toFixed(1) + '%';
+
+const inputs = {
+  buyers: document.getElementById('in_buyers'),
+  aov: document.getElementById('in_aov'),
+  cac: document.getElementById('in_cac'),
+  core_conv: document.getElementById('in_core_conv'),
+  core_price: document.getElementById('in_core_price'),
+  take_core: document.getElementById('in_take_core'),
+  take_noncore: document.getElementById('in_take_noncore'),
+  cont_price: document.getElementById('in_cont_price'),
+  retention: document.getElementById('in_retention'),
+  pass_take: document.getElementById('in_pass_take'),
+  pass_price: document.getElementById('in_pass_price'),
+  lf_take: document.getElementById('in_lf_take'),
+};
+
+const labels = {
+  buyers: document.getElementById('lbl_buyers'),
+  aov: document.getElementById('lbl_aov'),
+  cac: document.getElementById('lbl_cac'),
+  core_conv: document.getElementById('lbl_core_conv'),
+  core_price: document.getElementById('lbl_core_price'),
+  take_core: document.getElementById('lbl_take_core'),
+  take_noncore: document.getElementById('lbl_take_noncore'),
+  cont_price: document.getElementById('lbl_cont_price'),
+  retention: document.getElementById('lbl_retention'),
+  pass_take: document.getElementById('lbl_pass_take'),
+  pass_price: document.getElementById('lbl_pass_price'),
+  lf_take: document.getElementById('lbl_lf_take'),
+};
+
+const outs = {
+  y3: document.getElementById('out_y3'),
+  y3_delta: document.getElementById('out_y3_delta'),
+  y3_strip: document.getElementById('out_y3_strip'),
+  y1: document.getElementById('out_y1'),
+  y2: document.getElementById('out_y2'),
+  sl: document.getElementById('out_sl'),
+  ratio: document.getElementById('out_ratio'),
+  ss_members: document.getElementById('out_ss_members'),
+  sens: document.getElementById('sens_grid'),
+};
+
+// LIBRE — alc workshop assumptions hard-coded (not in slider UI)
+const ALC_PCT = 0.08;
+const ALC_PER = 1.3;
+const ALC_PRICE = 249;
+
+function compute(state) {
+  const { buyers, aov, cac, core_conv, core_price, take_core, take_noncore,
+          cont_price, retention, pass_take, pass_price, lf_take } = state;
+
+  const core_buyers = buyers * core_conv;
+  const non_core = buyers - core_buyers;
+  const new_cont = core_buyers * take_core + non_core * take_noncore;
+
+  const y1_active = new_cont;
+  const y2_active = y1_active * retention + new_cont;
+  const y3_active = y2_active * retention + new_cont;
+  const ss_members = new_cont / (1 - retention);
+
+  const fe_rev = buyers * aov;
+  const core_rev = core_buyers * core_price;
+  const alc_rev = non_core * ALC_PCT * ALC_PER * ALC_PRICE;
+
+  const cont_y1 = y1_active * cont_price;
+  const cont_y2 = y2_active * cont_price;
+  const cont_y3 = y3_active * cont_price;
+
+  const pass_y1 = y1_active * pass_take * pass_price;
+  const pass_y2 = y2_active * pass_take * pass_price;
+  const pass_y3 = y3_active * pass_take * pass_price;
+
+  // Lifetime Founder upgrades — only kick in Y2+ since members need 90 days
+  const lf_y2 = y1_active * lf_take * 1999;
+  const lf_y3 = y2_active * lf_take * 1999;
+
+  const y1 = fe_rev + core_rev + alc_rev + cont_y1 + pass_y1;
+  const y2 = fe_rev + core_rev + alc_rev + cont_y2 + pass_y2 + lf_y2;
+  const y3 = fe_rev + core_rev + alc_rev + cont_y3 + pass_y3 + lf_y3;
+
+  const ltv = aov + core_conv * core_price +
+              (take_core * core_conv + take_noncore * (1 - core_conv)) * cont_price / (1 - retention);
+  const ratio = ltv / cac;
+  const sl_ratio = aov / cac;
+
+  return { y1, y2, y3, ss_members, ss_cont_rev: ss_members * cont_price,
+           ltv, ratio, sl_ratio, new_cont };
+}
+
+function colorClass(val, thresholds) {
+  // thresholds = [redBelow, amberBelow] -> green if above amber
+  if (val < thresholds[0]) return 'red';
+  if (val < thresholds[1]) return 'amber';
+  return 'green';
+}
+
+function render() {
+  // Read current state
+  const state = {
+    buyers: +inputs.buyers.value,
+    aov: +inputs.aov.value,
+    cac: +inputs.cac.value,
+    core_conv: +inputs.core_conv.value,
+    core_price: +inputs.core_price.value,
+    take_core: +inputs.take_core.value,
+    take_noncore: +inputs.take_noncore.value,
+    cont_price: +inputs.cont_price.value,
+    retention: +inputs.retention.value,
+    pass_take: +inputs.pass_take.value,
+    pass_price: +inputs.pass_price.value,
+    lf_take: +inputs.lf_take.value,
+  };
+
+  // Update labels
+  labels.buyers.textContent = state.buyers.toLocaleString();
+  labels.aov.textContent = '$' + state.aov;
+  labels.cac.textContent = '$' + state.cac;
+  labels.core_conv.textContent = fmtPctD(state.core_conv);
+  labels.core_price.textContent = fmt(state.core_price);
+  labels.take_core.textContent = fmtPctD(state.take_core);
+  labels.take_noncore.textContent = fmtPctD(state.take_noncore);
+  labels.cont_price.textContent = fmt(state.cont_price);
+  labels.retention.textContent = fmtPct(state.retention);
+  labels.pass_take.textContent = fmtPct(state.pass_take);
+  labels.pass_price.textContent = '$' + state.pass_price;
+  labels.lf_take.textContent = fmtPct(state.lf_take);
+
+  // Compute
+  const r = compute(state);
+
+  // Headline output
+  outs.y3.textContent = fmtM(r.y3);
+  const y3cls = colorClass(r.y3, [15000000, 19000000]);
+  outs.y3.className = 'output-headline-value ' + y3cls;
+  const delta = r.y3 - 20000000;
+  if (delta >= 0) {
+    outs.y3_delta.textContent = fmtM(delta).replace('$', '+$') + ' above $20M target';
+    outs.y3_delta.className = 'output-headline-delta green';
+  } else {
+    outs.y3_delta.textContent = fmtM(Math.abs(delta)) + ' under $20M target';
+    outs.y3_delta.className = 'output-headline-delta red';
+  }
+
+  outs.y1.textContent = fmtM(r.y1);
+  outs.y2.textContent = fmtM(r.y2);
+  outs.y3_strip.textContent = fmtM(r.y3);
+
+  // Tiles
+  outs.sl.textContent = r.sl_ratio.toFixed(2) + 'x';
+  outs.sl.className = 'output-tile-value ' + (r.sl_ratio >= 1.0 ? 'green' : 'red');
+
+  outs.ratio.textContent = r.ratio.toFixed(2) + 'x';
+  outs.ratio.className = 'output-tile-value ' + (r.ratio >= 3.0 ? 'green' : (r.ratio >= 2.0 ? '' : 'red'));
+
+  outs.ss_members.textContent = Math.round(r.ss_members).toLocaleString();
+
+  // Sensitivity grid (rebuild)
+  const sensRows = [0.20, 0.30, 0.40, 0.45, 0.50, 0.60, 0.70, 0.80];
+  const activeRet = state.retention;
+  let html = `
+    <div class="head">Retention</div>
+    <div class="head cell-num">SS members</div>
+    <div class="head cell-num">SS continuity $/yr</div>
+    <div class="head cell-num">Year-3 total</div>
+  `;
+  sensRows.forEach(ret => {
+    const isActive = Math.abs(ret - activeRet) < 0.001;
+    const s2 = { ...state, retention: ret };
+    const r2 = compute(s2);
+    const cls = isActive ? 'active' : '';
+    const cls2 = isActive ? 'active cell-num' : 'cell-num';
+    html += `
+      <div class="${cls}">${fmtPct(ret)}</div>
+      <div class="${cls2}">${Math.round(r2.ss_members).toLocaleString()}</div>
+      <div class="${cls2}">${fmtM(r2.ss_cont_rev)}</div>
+      <div class="${cls2}">${fmtM(r2.y3)}</div>
+    `;
+  });
+  outs.sens.innerHTML = html;
+}
+
+// Wire up listeners
+Object.values(inputs).forEach(el => el.addEventListener('input', render));
+
+// ===== PRESET SCENARIOS =====
+const presets = {
+  conservative: {
+    buyers: 25000, aov: 200, cac: 185, core_conv: 0.10, core_price: 1715,
+    take_core: 0.15, take_noncore: 0.03, cont_price: 1500, retention: 0.40,
+    pass_take: 0.35, pass_price: 599, lf_take: 0.03
+  },
+  target: {
+    buyers: 30000, aov: 200, cac: 185, core_conv: 0.12, core_price: 1715,
+    take_core: 0.25, take_noncore: 0.05, cont_price: 1500, retention: 0.55,
+    pass_take: 0.40, pass_price: 599, lf_take: 0.05
+  },
+  bull: {
+    buyers: 32000, aov: 200, cac: 185, core_conv: 0.13, core_price: 1715,
+    take_core: 0.28, take_noncore: 0.05, cont_price: 1500, retention: 0.55,
+    pass_take: 0.45, pass_price: 599, lf_take: 0.07
+  }
+};
+
+document.querySelectorAll('.preset-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const presetName = btn.dataset.preset;
+    const preset = presets[presetName];
+    if (!preset) return;
+    // Apply all preset values to sliders
+    Object.keys(preset).forEach(key => {
+      if (inputs[key]) inputs[key].value = preset[key];
+    });
+    // Update active state on buttons
+    document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Recompute outputs
+    render();
+  });
+});
+
+// Initial render
+render();
+</script>
+
+</body>
+</html>
