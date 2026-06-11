@@ -133,7 +133,8 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
 .output-headline-delta { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 6px; font-weight: 700; letter-spacing: 0.04em; }
 .output-headline-delta.green { color: var(--accent-deep); }
 .output-headline-delta.red { color: var(--hot); }
-.output-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.output-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 920px) { .output-row { grid-template-columns: 1fr 1fr; } }
 .output-tile { background: var(--ink-soft); padding: 20px 18px; border: 1px solid var(--ink-faint); }
 .output-tile-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,250,247,0.55); font-weight: 700; margin-bottom: 6px; }
 .output-tile-value { font-family: var(--serif); font-weight: 500; font-size: 24px; line-height: 1.0; letter-spacing: -0.015em; color: var(--paper); font-variation-settings: "opsz" 144; }
@@ -229,11 +230,15 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
   <h2 class="section">The baseline correction we should make first.</h2>
 
   <p>
-    Before the strategic argument, one calibration that changes the framing. The audit's $5.5M base is Meta-attributed, not company-wide. The $9M Stripe figure is total revenue across all channels &mdash; Meta, LinkedIn, affiliate, direct, partnerships. The audit's footnotes put Stripe gross 30-40% above the Meta line.
+    Before the strategic argument, one calibration that changes the framing. The audit's $5.5M base is Meta-attributed, not company-wide. The $9M Stripe figure is total revenue across all channels &mdash; Meta, LinkedIn, affiliate, direct, partnerships. <strong>The Stripe figure runs materially above the Meta-attributed line</strong> &mdash; exact reconciliation requires raw channel data we'd pull as Phase 2 Move 0.
   </p>
 
   <p>
     Expressed in total-company terms, <strong>the audit's Year-2 figure is materially higher than $8.8M</strong>. The "the plan lands us where we are today" framing compares a slice (Meta-attributed) to the whole (company total). That's a meaningful but recoverable misread. <em>That said, the audit's ambition is calibrated to Phase 1 optimization &mdash; not to the $20M question.</em> This proposal answers the $20M question separately.
+  </p>
+
+  <p>
+    <strong>Two clarifications that scope this proposal correctly</strong>: (1) The interactive model below projects Meta-driven acquisition only. Non-Meta revenue (~$3M today across LinkedIn, affiliate, direct, partnerships) continues separately and stacks on top as upside. The "$20M" figure refers to the Meta-driven engine. (2) The model implies meaningful ad spend growth &mdash; at Target scenario, 30K front-end buyers at $185 CAC = $5.55M/yr ad budget, up from current ~$3.4M. <em>The ad spend tile in the calculator surfaces this explicitly, so you can flex it.</em>
   </p>
 
   <h2 class="section">The two questions $20M requires answering.</h2>
@@ -316,7 +321,7 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
       <div class="rung-job">Upfront cash and margin</div>
       <div class="rung-price">$1,715 (unchanged)</div>
       <div class="rung-body">
-        The proven transformation, paid upfront. Continues as the current cold catalog + AI funnel offer AND sold via 72-hour upsell from front-end buyers. <strong>This is the profit center. Do not touch it.</strong> By Year 3: 3,500&ndash;4,000 buyers/yr at higher conversion (~12% from a larger front-end base).
+        The proven transformation, paid upfront. Continues as the current cold catalog + AI funnel offer AND sold via 72-hour upsell from front-end buyers, with email nurture extending the conversion window to 90 days. <strong>This is the profit center. Do not touch it.</strong> By Year 3: 3,500&ndash;4,000 buyers/yr at ~12% conversion across the 30-90 day window. <em>(Note: 12% is the optimistic case &mdash; immediate 72-hour upsell typically runs 3-5%; the full 12% requires a structured nurture sequence we'd build out.)</em>
       </div>
     </div>
     <div class="rung">
@@ -343,8 +348,8 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
   <ul>
     <li><strong>Workshop Pass &mdash; $599/yr</strong>: all 12 monthly workshops included. Target take rate 35-45% among members. Pure add-on revenue.</li>
     <li><strong>À la carte workshop tickets</strong>: $199 member rate, $499-$999 non-member rate. Standalone revenue stream + acquisition channel (checkout upsell to membership).</li>
-    <li><strong>Multi-year prepay at renewal</strong>: $2,499 for 2 years (saves $501, captures cash upfront, eliminates Year 2 renewal risk). Target take rate 25-35% of renewing members.</li>
-    <li><strong>Lifetime Founder upgrade &mdash; $1,999</strong>: engaged members (90+ days active) can upgrade to lifetime continuity-equivalent access. Includes future modules + Workshop Pass renewable at $299/yr forever. Capped at 200/year. Premium positioning, not a discount.</li>
+    <li><strong>Multi-year prepay at renewal</strong>: $2,499 for 2 years (saves $501, captures cash upfront, eliminates Year 2 renewal risk). Target take rate 25-35% of renewing members. <em>Cash-flow mechanic &mdash; pulls Y2-Y3 cash into Y1 at renewal, doesn't create new revenue. Not separately modeled in the calculator since it doesn't change 3-year totals.</em></li>
+    <li><strong>Lifetime Founder upgrade &mdash; $1,999</strong>: engaged members (90+ days active) can upgrade to lifetime continuity-equivalent access. Includes future modules + Workshop Pass renewable at $299/yr forever. Capped at 200/year. <em>Net economic effect: captures upfront cash now AND modestly lifts LTV vs continuing renewals at 55% retention &mdash; expected LF LTV ~$4,000 vs expected continuing-sub LTV ~$3,000. Trade-off: trades steady recurring cash flow for lumpy upfront cash plus a long-tail $299/yr workshop stream.</em></li>
   </ul>
 
 </div>
@@ -405,8 +410,8 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
       <div class="input-divider-label">Rung 3 &mdash; Continuity (sold warm)</div>
 
       <div class="input-group">
-        <div class="input-label"><span>Take rate &mdash; from core buyers</span><span class="input-value" id="lbl_take_core">25%</span></div>
-        <input type="range" id="in_take_core" min="0.05" max="0.40" step="0.01" value="0.25">
+        <div class="input-label"><span>Take rate &mdash; from core buyers</span><span class="input-value" id="lbl_take_core">26%</span></div>
+        <input type="range" id="in_take_core" min="0.05" max="0.40" step="0.01" value="0.26">
       </div>
 
       <div class="input-group">
@@ -447,22 +452,22 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
 
       <div class="output-headline">
         <div class="output-headline-label">Year 3 Total Revenue</div>
-        <div class="output-headline-value" id="out_y3">$17.8M</div>
-        <div class="output-headline-delta" id="out_y3_delta">$2.2M under $20M target</div>
+        <div class="output-headline-value green" id="out_y3">$20.15M</div>
+        <div class="output-headline-delta green" id="out_y3_delta">+$0.15M above $20M target</div>
       </div>
 
       <div class="year-strip">
         <div class="year-tile">
           <div class="year-tile-label">Year 1</div>
-          <div class="year-tile-value" id="out_y1">$12.7M</div>
+          <div class="year-tile-value" id="out_y1">$16.78M</div>
         </div>
         <div class="year-tile">
           <div class="year-tile-label">Year 2</div>
-          <div class="year-tile-value" id="out_y2">$15.6M</div>
+          <div class="year-tile-value" id="out_y2">$19.00M</div>
         </div>
         <div class="year-tile">
           <div class="year-tile-label">Year 3</div>
-          <div class="year-tile-value" id="out_y3_strip">$17.8M</div>
+          <div class="year-tile-value" id="out_y3_strip">$20.15M</div>
         </div>
       </div>
 
@@ -474,13 +479,18 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
         </div>
         <div class="output-tile">
           <div class="output-tile-label">LTV : CAC</div>
-          <div class="output-tile-value" id="out_ratio">2.80x</div>
+          <div class="output-tile-value green" id="out_ratio">3.65x</div>
           <div class="output-tile-sub">Industry benchmark &ge; 3.0x</div>
         </div>
         <div class="output-tile">
           <div class="output-tile-label">Steady-state members</div>
-          <div class="output-tile-value" id="out_ss_members">2,153</div>
-          <div class="output-tile-sub">new ÷ (1 &minus; retention)</div>
+          <div class="output-tile-value" id="out_ss_members">4,512</div>
+          <div class="output-tile-sub">new ÷ (1 &minus; eff. retention)</div>
+        </div>
+        <div class="output-tile">
+          <div class="output-tile-label">Implied ad spend / yr</div>
+          <div class="output-tile-value" id="out_ad_spend">$5.55M</div>
+          <div class="output-tile-sub">buyers &times; CAC · current: $3.4M</div>
         </div>
       </div>
 
@@ -495,7 +505,8 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
   </div>
 
   <div class="calc-footer">
-    <strong>The structural insight:</strong> recurring revenue scales as 1 &divide; (1 &minus; retention). A 25%-retention business and a 60%-retention business are <em>not variations of each other &mdash; they are different companies built on the same ad spend.</em> Augment has never measured continuity retention because they've never sold continuity. The 45% base case is the edtech industry standard. The whole bet is whether community quality lifts it above that line.
+    <strong>The structural insight:</strong> recurring revenue scales as 1 &divide; (1 &minus; retention). A 25%-retention business and a 60%-retention business are <em>not variations of each other &mdash; they are different companies built on the same ad spend.</em> Industry standard edtech retention sits at 40-45%. The Target preset assumes 55% &mdash; above industry standard, achievable with the community investment described below, but not automatic. <strong>The whole bet is whether community quality lifts retention above the industry line.</strong> Model is directional &mdash; structure, not forecast.<br><br>
+    <em>Two notes on what's not in the math:</em> (1) Year 1 figures assume mature steady-state acquisition. Realistic Y1 launch ramp from current $9M baseline to 30K-buyer velocity lands closer to $12-14M; treat the calculator's Y1 as the second-year "mature Y1" not the launch Y1. (2) The model includes ~$684K/yr of &agrave; la carte workshop revenue (8% of non-core front-end buyers &times; 1.3 tickets/yr &times; $249) baked into the front-end revenue line.
   </div>
 
 </div>
@@ -504,29 +515,50 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
 
 <div class="container">
 
-  <h2 class="section">The retention bet.</h2>
+  <h2 class="section">The retention bet &mdash; and what we're betting blind on.</h2>
 
   <p>
-    The single most load-bearing variable in the entire model is continuity retention. Move the slider above between 25% and 65% and watch Year 3 swing by $4-6M. That's the difference between hitting $20M comfortably and missing by $3M.
+    The single most load-bearing variable in the entire model is continuity retention. Move the slider above between 25% and 65% &mdash; with everything else at Target preset, Year 3 swings from ~$18M to ~$21M. That's the difference between landing slightly under target and clearing it with cushion.
   </p>
 
   <p>
-    Augment has never measured continuity retention because they've never sold continuity. The 45% base case is the edtech industry standard &mdash; not optimistic, not pessimistic. <strong>What kills retention: static content, weak community, no live programming.</strong> What sustains it: continuous new modules, monthly workshops, member-led peer programming, and a community where the relationships are the product.
+    Augment has never measured continuity retention because they've never sold continuity. Industry standard edtech retention sits at 40-45%. The Target preset assumes 55% &mdash; above industry standard, defensible only if community quality is genuinely real. <strong>What kills retention: static content, weak community, no live programming.</strong> What sustains it: continuous new modules, monthly workshops, member-led peer programming, and a community where the relationships are the product.
   </p>
 
   <p>
-    The proposal builds in 4-6 new modules per year + 12 monthly workshops + ongoing community curation. That's a $400-600K/yr content + community investment. <strong>Without this, retention collapses to 25-30% and the model breaks.</strong> The content commitment is not optional &mdash; it is the bet.
+    <strong>Retention is the most load-bearing variable &mdash; but it's not the only unproven one.</strong> The model also assumes Year-3 acquisition velocity of 25K-30K front-end buyers per year &mdash; a meaningful scale-up from Test 2's 150-buyer cohort, requiring $5.55M ad spend (vs current $3.4M) and an OTO stack that clears day-one AOV (not yet built). There are <em>two bets running in series</em>: can we acquire at break-even on the front end, and will buyers stay long enough on continuity for the renewal compound to matter. Both have to work. Neither has been tested at scale.
   </p>
+
+  <div class="callout-light">
+    <div class="callout-light-kicker">What's measured vs what's assumed</div>
+    <div class="callout-light-text">
+      The model has <strong>five inputs we don't have data on</strong>: continuity retention (never sold), continuity take rate from core (never offered), continuity take rate from non-core (never offered), Workshop Pass demand (never offered), and Lifetime Founder upgrade demand (never offered). Each is a directional estimate based on edtech category norms &mdash; not an Augment-specific measurement. <em>The cheapest way to convert these from estimates to data is the warm continuity test described in "The next move" below &mdash; before the build, before the scale, before the spend.</em>
+    </div>
+  </div>
+
+  <p>
+    The proposal builds in 4-6 new modules per year + 12 monthly workshops + ongoing community curation + community management staffing + event production. That's a <strong>$800K-$1.2M/yr content + community investment</strong> at the level required to sustain 55% retention and 25%+ take rates. Lighter investment ($400-600K range) lands the model at industry-standard retention (40-45%) and industry-standard take (10-15%) &mdash; Year 3 closer to $15-17M. <strong>The content and community commitment is not optional &mdash; it is the bet.</strong>
+  </p>
+
+  <div class="callout-light">
+    <div class="callout-light-kicker">The cost picture (revenue model isn't a P&amp;L)</div>
+    <div class="callout-light-text">
+      The calculator shows gross revenue. Total operating cost at Target scale: ~$5.55M ad spend (visible in calculator) + ~$1M content/community + ~$1.5M delivery, support, platform, ops = <strong>roughly $8M total operating cost</strong>. Year 3 net contribution: <strong>~$12M</strong>. The self-liquidating front end means Meta spend offsets at the AOV line, not as a separate deduction &mdash; so the contribution math holds even at higher buyer volumes.
+    </div>
+  </div>
 
   <h2 class="section">The take rate concern (and the answer).</h2>
 
   <p>
-    The honest concern with this model: take rates. Industry standard upsell from a paying customer base to a continuity tier is 10-15%. The optimistic baseline (30% from core buyers, 5% from front-end non-core) is achievable but not guaranteed.
+    The honest concern with this model: take rates. Industry standard upsell from a paying customer base to a continuity tier is 10-15%. The Target preset assumes 26% from core buyers and 5% from front-end non-core &mdash; nearly double industry standard. Achievable with community as the gravitational pull, but not automatic.
   </p>
 
   <p>
-    At realistic take rates (15% core, 3% non-core), the calculator lands Year 3 around $17-18M &mdash; misses $20M target by $2-3M. <strong>The fix isn't pricing or volume &mdash; it's community quality.</strong>
+    <em>A note on the non-core 5%</em>: this isn't 5% of every front-end buyer regardless of engagement. It applies to the <strong>engaged subset</strong> &mdash; buyers who completed the tripwire, opened the email nurture sequence, and engaged with community previews but didn't take the $1,715 upsell. Realistically that's ~30% of front-end. Among that engaged 30%, the effective conversion to continuity is ~16-17%, which is industry-standard for warm community-led offers. The blended 5%-of-total reflects this combined logic, not a flat 5% across everyone.
   </p>
+
+  <p>
+    At industry-standard take rates (15% core, 3% non-core, retention held at Target's 55%), the calculator lands Year 3 around $17M &mdash; misses $20M target by $3M. At industry-standard everything (Conservative preset: 10% core conv, 15% core take, 3% non-core, 40% retention), it lands closer to $13M. <strong>The fix isn't pricing or volume &mdash; it's community quality.</strong></p>
 
   <p>
     Best-in-class community-led subscriptions convert at 25-35% from core base because the offer isn't "more content" &mdash; it's "the people in this room are the operator network you need, and you can't get this anywhere else." That's structurally different from "join our community Slack." It requires:
@@ -556,7 +588,11 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
   <h3>Subscription as cold-acquisition front door (initial proposal, dropped)</h3>
 
   <p>
-    Earlier drafts proposed a $499 Basic / $999 Pro subscription as the primary cold-acquisition mechanism on Meta. Dropped. <strong>The Day-One AOV principle showed this fails the same way Test 1 failed</strong> &mdash; $499 or $999 day-one cash cannot carry $400-$800 CAC by itself. Subscription belongs on warm acquisition (MBA grads + engaged tripwire buyers), not cold. The three-rung structure with self-liquidating tripwire as cold acquisition is structurally cleaner.
+    Earlier drafts proposed a $499 Basic / $999 Pro subscription as the primary cold-acquisition mechanism on Meta. Dropped &mdash; but for a sharper reason than "cold sub doesn't work."
+  </p>
+
+  <p>
+    <strong>The Day-One AOV rule technically permits cold subscription if annual price clears CAC.</strong> A $999 annual sub against a $200 CAC would pass the cash-math test. The reason we still dropped it: cold buyers haven't experienced the product, so first-year churn runs much higher than warm-acquired subs &mdash; typically 60-70% first-year churn cold vs 35-45% warm. The day-one cash math passes; the Year-2 economics don't. <em>Day-One AOV is a necessary condition, not a sufficient one &mdash; first-year retention also has to support the renewal year.</em> Warm acquisition (from tripwire buyers or MBA grads) doesn't have this churn premium because the buyer has already experienced product value before subscribing. The three-rung structure with self-liquidating tripwire as cold acquisition is structurally cleaner.
   </p>
 
   <h3>Two-tier sub at $499 Basic + $999 Pro (dropped)</h3>
@@ -590,7 +626,7 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
       <li><strong>Don't convert the $1,715 lifetime into subscription.</strong> That trades a proven paid-upfront profit center for a leaky $399 that churns the moment members graduate. Most dangerous move on the table.</li>
       <li><strong>Don't sell continuity cold as the acquisition offer.</strong> Day-One AOV principle. Continuity belongs on warm acquisition only.</li>
       <li><strong>Don't scale any front-end before day-one AOV &ge; CAC.</strong> The AI Prompting horse is close (~1.0x). Finish the OTO stack engineering before scaling spend.</li>
-      <li><strong>Don't build the entire model on the assumed 45% retention.</strong> Pressure-test the calculator at 25-30% to see what survives. The community investment is what determines which scenario plays out.</li>
+      <li><strong>Don't build the entire model on any single retention assumption.</strong> Pressure-test the calculator at 30%, 45%, and 55% to see what survives. Industry standard is 40-45%; the Target preset assumes 55%. The community investment is what determines which scenario plays out.</li>
       <li><strong>Don't drop the entry price without pricing in the worse-avatar effect.</strong> A $149 buyer is not a smaller version of a $1,715 buyer &mdash; lower intent, higher churn, more support cost. Model discounts for this.</li>
       <li><strong>Don't clutter the funnel with four or five offers.</strong> Three rungs. Clean ladder.</li>
       <li><strong>Don't ask new cheap buyers to prepay 2-3 years upfront.</strong> Multi-year prepay belongs at the renewal / value moment, not at first purchase.</li>
@@ -613,12 +649,12 @@ input[type="range"].lever-input::-moz-range-thumb { background: var(--accent); w
     </div>
     <div class="phase-row">
       <div class="phase-num">Phase 3</div>
-      <div><strong>Scale + measure.</strong> Increase Meta spend on the working tripwire + open Lifetime Founder upgrade flow to engaged members. Instrument Day-30/60/90 retention proxies. First standalone workshop sold to non-members at premium price ($499-$999). Project Year 1 renewal rate from engagement data. Goal: 2,500-3,500 active members by Month 9.</div>
+      <div><strong>Scale + measure.</strong> Increase Meta spend on the working tripwire + open Lifetime Founder upgrade flow to engaged members. Instrument Day-30/60/90 retention proxies. First standalone workshop sold to non-members at premium price ($499-$999). Project Year 1 renewal rate from engagement data. Goal: 2,000-3,000 active members by Month 9.</div>
       <div class="phase-when">Months 7-9</div>
     </div>
     <div class="phase-row">
       <div class="phase-num">Phase 4</div>
-      <div><strong>Compound + decide.</strong> First Year-1 cohort hits renewal decision point. Multi-year prepay offered to engaged members at renewal. Real retention data lands. Decision gate: if retention &ge; 40%, scale aggressively. If retention &lt; 30%, evaluate community investment.</div>
+      <div><strong>Compound + decide.</strong> First Year-1 cohort hits renewal decision point. Multi-year prepay offered to engaged members at renewal. Real retention data lands. <strong>Three-state decision gate</strong>: if retention &ge; 45%, scale aggressively (the bet is working); if 30-45%, double down on community investment and re-test in 6 months (the most likely outcome); if &lt; 30%, pivot &mdash; community-led isn't delivering and the model needs restructuring.</div>
       <div class="phase-when">Months 10-12</div>
     </div>
     <div class="phase-row">
@@ -756,6 +792,7 @@ const outs = {
   sl: document.getElementById('out_sl'),
   ratio: document.getElementById('out_ratio'),
   ss_members: document.getElementById('out_ss_members'),
+  ad_spend: document.getElementById('out_ad_spend'),
   sens: document.getElementById('sens_grid'),
 };
 
@@ -772,10 +809,18 @@ function compute(state) {
   const non_core = buyers - core_buyers;
   const new_cont = core_buyers * take_core + non_core * take_noncore;
 
+  // LF upgraders exit the sub-renewal cycle each year (they bought lifetime)
+  // Effective retention = nominal retention minus LF upgrade rate
+  const effective_ret = Math.max(0, retention - lf_take);
+
   const y1_active = new_cont;
-  const y2_active = y1_active * retention + new_cont;
-  const y3_active = y2_active * retention + new_cont;
-  const ss_members = new_cont / (1 - retention);
+  const y2_active = y1_active * effective_ret + new_cont;
+  const y3_active = y2_active * effective_ret + new_cont;
+  const ss_members = effective_ret < 1 ? new_cont / (1 - effective_ret) : Infinity;
+
+  // Cumulative LF members — once upgraded, they continue paying $299/yr Workshop Pass
+  const lf_cumulative_y2 = y1_active * lf_take;
+  const lf_cumulative_y3 = lf_cumulative_y2 + y2_active * lf_take;
 
   const fe_rev = buyers * aov;
   const core_rev = core_buyers * core_price;
@@ -789,21 +834,31 @@ function compute(state) {
   const pass_y2 = y2_active * pass_take * pass_price;
   const pass_y3 = y3_active * pass_take * pass_price;
 
-  // Lifetime Founder upgrades — only kick in Y2+ since members need 90 days
+  // LF upgrades happen Y2+ (members need 90 days active to qualify)
   const lf_y2 = y1_active * lf_take * 1999;
   const lf_y3 = y2_active * lf_take * 1999;
 
-  const y1 = fe_rev + core_rev + alc_rev + cont_y1 + pass_y1;
-  const y2 = fe_rev + core_rev + alc_rev + cont_y2 + pass_y2 + lf_y2;
-  const y3 = fe_rev + core_rev + alc_rev + cont_y3 + pass_y3 + lf_y3;
+  // LF members continue paying $299/yr for member-rate Workshop Pass after upgrade
+  const lf_workshop_y2 = lf_cumulative_y2 * 299;
+  const lf_workshop_y3 = lf_cumulative_y3 * 299;
 
-  const ltv = aov + core_conv * core_price +
-              (take_core * core_conv + take_noncore * (1 - core_conv)) * cont_price / (1 - retention);
+  const y1 = fe_rev + core_rev + alc_rev + cont_y1 + pass_y1;
+  const y2 = fe_rev + core_rev + alc_rev + cont_y2 + pass_y2 + lf_y2 + lf_workshop_y2;
+  const y3 = fe_rev + core_rev + alc_rev + cont_y3 + pass_y3 + lf_y3 + lf_workshop_y3;
+
+  // Complete LTV: front-end + core + continuity stream + workshop pass stream + LF one-time
+  const cont_weighted = take_core * core_conv + take_noncore * (1 - core_conv);
+  const ltv = aov
+    + core_conv * core_price
+    + cont_weighted * cont_price / (1 - effective_ret)
+    + cont_weighted * pass_take * pass_price / (1 - effective_ret)
+    + cont_weighted * lf_take * 1999;
   const ratio = ltv / cac;
   const sl_ratio = aov / cac;
+  const ad_spend = buyers * cac;
 
   return { y1, y2, y3, ss_members, ss_cont_rev: ss_members * cont_price,
-           ltv, ratio, sl_ratio, new_cont };
+           ltv, ratio, sl_ratio, new_cont, ad_spend };
 }
 
 function colorClass(val, thresholds) {
@@ -873,6 +928,17 @@ function render() {
 
   outs.ss_members.textContent = Math.round(r.ss_members).toLocaleString();
 
+  // Ad spend (buyers × CAC) — color-coded vs current $3.4M baseline
+  outs.ad_spend.textContent = '$' + (r.ad_spend / 1000000).toFixed(2) + 'M';
+  const current_spend = 3400000;
+  if (r.ad_spend > current_spend * 1.4) {
+    outs.ad_spend.className = 'output-tile-value red';
+  } else if (r.ad_spend > current_spend) {
+    outs.ad_spend.className = 'output-tile-value';
+  } else {
+    outs.ad_spend.className = 'output-tile-value green';
+  }
+
   // Sensitivity grid (rebuild)
   const sensRows = [0.20, 0.30, 0.40, 0.45, 0.50, 0.60, 0.70, 0.80];
   const activeRet = state.retention;
@@ -910,7 +976,7 @@ const presets = {
   },
   target: {
     buyers: 30000, aov: 200, cac: 185, core_conv: 0.12, core_price: 1715,
-    take_core: 0.25, take_noncore: 0.05, cont_price: 1500, retention: 0.55,
+    take_core: 0.26, take_noncore: 0.05, cont_price: 1500, retention: 0.55,
     pass_take: 0.40, pass_price: 599, lf_take: 0.05
   },
   bull: {
